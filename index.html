@@ -1588,49 +1588,70 @@
      CATÁLOGO VIRTUAL
 ===================================================== -->
 
+<!-- =====================================================
+     CATÁLOGO VIRTUAL
+===================================================== -->
+
 <section id="catalogo">
+
+    <div class="section-title">
+
+        <small>
+            Catálogo virtual
+        </small>
+
+        <h2>
+            Conocé todas nuestras soluciones
+        </h2>
+
+        <p>
+            Explorá nuestro catálogo digital y conocé
+            nuestros productos y soluciones agrícolas.
+        </p>
+
+    </div>
+
 
     <div class="catalog-box">
 
         <div class="catalog-content">
 
             <small>
-                Catálogo virtual
+                MASTER AGRO
             </small>
 
             <h2>
-                Conocé todas nuestras
-                soluciones.
+                Nuestro catálogo
             </h2>
 
             <p>
-                Explorá nuestro catálogo virtual y
-                encontrá información de nuestros
-                productos, líneas y soluciones agrícolas.
+                Pasá las páginas de nuestro catálogo
+                como una revista digital.
             </p>
+
 
             <div class="catalog-buttons">
 
-                <!--
-                    CAMBIAR EL ENLACE POR EL PDF REAL
-                -->
+                <!-- ABRIR REVISTA -->
 
-                <a
-                    href="documentos/catalogo-master-agro.pdf"
-                    target="_blank"
-                    class="catalog-button">
+                <button
+                    type="button"
+                    class="catalog-button"
+                    id="abrirCatalogo">
 
-                    Ver catálogo →
+                    📖 Ver catálogo →
 
-                </a>
+                </button>
 
+
+                <!-- DESCARGAR PDF -->
 
                 <a
                     href="documentos/catalogo-master-agro.pdf"
                     download
                     class="catalog-button secondary">
 
-                    Descargar PDF
+                    ↓ Descargar PDF
 
                 </a>
 
@@ -1644,8 +1665,11 @@
             <div class="catalog-placeholder">
 
                 MASTER<br>
-                AGRO<br><br>
-                CATÁLOGO
+                AGRO
+
+                <span>
+                    CATÁLOGO
+                </span>
 
             </div>
 
@@ -1654,6 +1678,131 @@
     </div>
 
 </section>
+
+
+<!-- =====================================================
+     VISOR DE REVISTA
+===================================================== -->
+
+<div
+    id="catalogoModal"
+    class="catalogo-modal">
+
+
+    <!-- CERRAR -->
+
+    <button
+        id="cerrarCatalogo"
+        class="catalogo-close"
+        aria-label="Cerrar catálogo">
+
+        ✕
+
+    </button>
+
+
+    <!-- CONTENEDOR -->
+
+    <div class="catalogo-modal-content">
+
+
+        <!-- TÍTULO -->
+
+        <div class="catalogo-modal-header">
+
+            <span>
+                MASTER AGRO
+            </span>
+
+            <strong>
+                Catálogo virtual
+            </strong>
+
+        </div>
+
+
+        <!-- REVISTA -->
+
+        <div class="catalogo-viewer">
+
+            <button
+                id="prevPage"
+                class="flip-button prev"
+                aria-label="Página anterior">
+
+                ❮
+
+            </button>
+
+
+            <div
+                id="flipbook"
+                class="flipbook">
+            </div>
+
+
+            <button
+                id="nextPage"
+                class="flip-button next"
+                aria-label="Página siguiente">
+
+                ❯
+
+            </button>
+
+        </div>
+
+
+        <!-- CONTROLES -->
+
+        <div class="catalogo-controls">
+
+            <button
+                id="zoomOut"
+                title="Alejar">
+
+                −
+
+            </button>
+
+
+            <span id="pageInfo">
+                Página 1
+            </span>
+
+
+            <button
+                id="zoomIn"
+                title="Acercar">
+
+                +
+
+            </button>
+
+
+            <button
+                id="fullscreenCatalogo"
+                title="Pantalla completa">
+
+                ⛶
+
+            </button>
+
+
+            <a
+                href="documentos/catalogo-master-agro.pdf"
+                download
+                class="catalog-download">
+
+                ↓ PDF
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
 
 </main>
 
@@ -2033,6 +2182,468 @@
 
     }
 
+    /* =====================================================
+   VISOR CATÁLOGO / REVISTA
+===================================================== */
+
+.catalogo-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    background:
+        rgba(5, 18, 10, .96);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease;
+
+}
+
+
+/* MODAL ACTIVO */
+
+.catalogo-modal.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* CONTENEDOR */
+
+.catalogo-modal-content {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+/* CABECERA */
+
+.catalogo-modal-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    color: white;
+
+}
+
+
+.catalogo-modal-header span {
+
+    color: #8fd29f;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.catalogo-modal-header strong {
+
+    font-size: 18px;
+
+}
+
+
+/* CERRAR */
+
+.catalogo-close {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.12);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 10002;
+
+    transition: .25s;
+
+}
+
+
+.catalogo-close:hover {
+
+    background: white;
+
+    color: var(--verde);
+
+    transform:
+        rotate(90deg);
+
+}
+
+
+/* =====================================================
+   VISOR
+===================================================== */
+
+.catalogo-viewer {
+
+    position: relative;
+
+    width: 100%;
+
+    flex: 1;
+
+    min-height: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* FLIPBOOK */
+
+.flipbook {
+
+    width: min(850px, 80vw);
+
+    height: min(80vh, 650px);
+
+}
+
+
+/* PÁGINAS */
+
+.catalogo-page {
+
+    background: white;
+
+    overflow: hidden;
+
+}
+
+
+.catalogo-page canvas {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+}
+
+
+/* =====================================================
+   BOTONES LATERALES
+===================================================== */
+
+.flip-button {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    z-index: 10001;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: var(--verde);
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.3);
+
+    transition: .25s;
+
+}
+
+
+.flip-button:hover {
+
+    background:
+        var(--verde);
+
+    color: white;
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+
+}
+
+
+.flip-button.prev {
+
+    left: 25px;
+
+}
+
+
+.flip-button.next {
+
+    right: 25px;
+
+}
+
+
+/* =====================================================
+   CONTROLES
+===================================================== */
+
+.catalogo-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+}
+
+
+.catalogo-controls button {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 1px solid
+        rgba(255,255,255,.15);
+
+    border-radius: 8px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+.catalogo-controls button:hover {
+
+    background: white;
+
+    color: var(--verde);
+
+}
+
+
+#pageInfo {
+
+    min-width: 130px;
+
+    text-align: center;
+
+    color:
+        rgba(255,255,255,.75);
+
+    font-size: 13px;
+
+}
+
+
+.catalog-download {
+
+    display: flex;
+
+    align-items: center;
+
+    height: 42px;
+
+    padding:
+        0 18px;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: var(--verde);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition: .2s;
+
+}
+
+
+.catalog-download:hover {
+
+    background:
+        var(--verde);
+
+    color: white;
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .catalogo-modal {
+
+        padding:
+            15px;
+
+    }
+
+
+    .catalogo-modal-header {
+
+        margin-right:
+            55px;
+
+    }
+
+
+    .catalogo-modal-header strong {
+
+        font-size: 15px;
+
+    }
+
+
+    .flipbook {
+
+        width: 88vw;
+
+        height: 75vh;
+
+    }
+
+
+    .flip-button {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 18px;
+
+    }
+
+
+    .flip-button.prev {
+
+        left: 3px;
+
+    }
+
+
+    .flip-button.next {
+
+        right: 3px;
+
+    }
+
+
+    .catalogo-controls {
+
+        gap: 6px;
+
+    }
+
+
+    #pageInfo {
+
+        min-width: 100px;
+
+    }
+
+}
+
+
+/* =====================================================
+   BLOQUEAR SCROLL CUANDO ESTÁ ABIERTA
+===================================================== */
+
+body.catalogo-abierto {
+
+    overflow: hidden;
+
+}
+    
 </style>
 
 
@@ -2075,5 +2686,428 @@
 
 </script>
 
+<!-- =====================================================
+     LIBRERÍAS CATÁLOGO
+===================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+
+    <script>
+
+/* =====================================================
+   CONFIGURACIÓN CATÁLOGO
+===================================================== */
+
+const PDF_CATALOGO =
+    "documentos/catalogo-master-agro.pdf";
+
+
+/* PDF.JS */
+
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+
+/* ELEMENTOS */
+
+const modalCatalogo =
+    document.getElementById("catalogoModal");
+
+const abrirCatalogo =
+    document.getElementById("abrirCatalogo");
+
+const cerrarCatalogo =
+    document.getElementById("cerrarCatalogo");
+
+const flipbook =
+    document.getElementById("flipbook");
+
+const prevPage =
+    document.getElementById("prevPage");
+
+const nextPage =
+    document.getElementById("nextPage");
+
+const pageInfo =
+    document.getElementById("pageInfo");
+
+const zoomIn =
+    document.getElementById("zoomIn");
+
+const zoomOut =
+    document.getElementById("zoomOut");
+
+const fullscreenCatalogo =
+    document.getElementById("fullscreenCatalogo");
+
+
+let pageFlip = null;
+
+let zoom = 1;
+
+
+/* =====================================================
+   ABRIR CATÁLOGO
+===================================================== */
+
+abrirCatalogo.addEventListener(
+    "click",
+    async function () {
+
+        modalCatalogo.classList.add("active");
+
+        document.body.classList.add(
+            "catalogo-abierto"
+        );
+
+
+        if (!pageFlip) {
+
+            await cargarCatalogo();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   CERRAR CATÁLOGO
+===================================================== */
+
+cerrarCatalogo.addEventListener(
+    "click",
+    cerrarRevista
+);
+
+
+function cerrarRevista() {
+
+    modalCatalogo.classList.remove(
+        "active"
+    );
+
+    document.body.classList.remove(
+        "catalogo-abierto"
+    );
+
+}
+
+
+/* =====================================================
+   ESCAPE
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (
+            event.key === "Escape" &&
+            modalCatalogo.classList.contains(
+                "active"
+            )
+        ) {
+
+            cerrarRevista();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   CARGAR PDF
+===================================================== */
+
+async function cargarCatalogo() {
+
+    try {
+
+        pageInfo.textContent =
+            "Cargando catálogo...";
+
+
+        const pdf =
+            await pdfjsLib.getDocument(
+                PDF_CATALOGO
+            ).promise;
+
+
+        const paginas = [];
+
+
+        /* CREAR PÁGINAS */
+
+        for (
+            let i = 1;
+            i <= pdf.numPages;
+            i++
+        ) {
+
+            const pagina =
+                await pdf.getPage(i);
+
+
+            const viewport =
+                pagina.getViewport({
+                    scale: 1.5
+                });
+
+
+            const canvas =
+                document.createElement(
+                    "canvas"
+                );
+
+
+            const context =
+                canvas.getContext(
+                    "2d"
+                );
+
+
+            canvas.width =
+                viewport.width;
+
+            canvas.height =
+                viewport.height;
+
+
+            await pagina.render({
+
+                canvasContext:
+                    context,
+
+                viewport:
+                    viewport
+
+            }).promise;
+
+
+            const pageElement =
+                document.createElement(
+                    "div"
+                );
+
+
+            pageElement.className =
+                "catalogo-page";
+
+
+            pageElement.appendChild(
+                canvas
+            );
+
+
+            flipbook.appendChild(
+                pageElement
+            );
+
+
+            paginas.push(
+                pageElement
+            );
+
+        }
+
+
+        /* =================================================
+           CREAR REVISTA
+        ================================================= */
+
+        pageFlip =
+            new St.PageFlip(
+                flipbook,
+                {
+
+                    width: 500,
+
+                    height: 707,
+
+                    size: "stretch",
+
+                    minWidth: 280,
+
+                    maxWidth: 850,
+
+                    minHeight: 400,
+
+                    maxHeight: 900,
+
+                    showCover: true,
+
+                    drawShadow: true,
+
+                    flippingTime: 700,
+
+                    usePortrait: true,
+
+                    mobileScrollSupport: true,
+
+                    startPage: 0
+
+                }
+            );
+
+
+        pageFlip.loadFromHTML(
+            paginas
+        );
+
+
+        /* EVENTO */
+
+        pageFlip.on(
+            "flip",
+            actualizarPagina
+        );
+
+
+        actualizarPagina();
+
+
+    } catch (error) {
+
+        console.error(
+            "Error:",
+            error
+        );
+
+
+        pageInfo.textContent =
+            "No se pudo cargar el catálogo.";
+
+    }
+
+}
+
+
+/* =====================================================
+   PÁGINA ACTUAL
+===================================================== */
+
+function actualizarPagina() {
+
+    if (!pageFlip)
+        return;
+
+
+    const actual =
+        pageFlip.getCurrentPageIndex() + 1;
+
+
+    const total =
+        pageFlip.getPageCount();
+
+
+    pageInfo.textContent =
+        `Página ${actual} de ${total}`;
+
+}
+
+
+/* =====================================================
+   ANTERIOR
+===================================================== */
+
+prevPage.addEventListener(
+    "click",
+    function () {
+
+        if (pageFlip) {
+
+            pageFlip.flipPrev();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   SIGUIENTE
+===================================================== */
+
+nextPage.addEventListener(
+    "click",
+    function () {
+
+        if (pageFlip) {
+
+            pageFlip.flipNext();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   ZOOM
+===================================================== */
+
+zoomIn.addEventListener(
+    "click",
+    function () {
+
+        zoom += .1;
+
+        if (zoom > 1.5)
+            zoom = 1.5;
+
+
+        flipbook.style.transform =
+            `scale(${zoom})`;
+
+    }
+);
+
+
+zoomOut.addEventListener(
+    "click",
+    function () {
+
+        zoom -= .1;
+
+        if (zoom < .8)
+            zoom = .8;
+
+
+        flipbook.style.transform =
+            `scale(${zoom})`;
+
+    }
+);
+
+
+/* =====================================================
+   PANTALLA COMPLETA
+===================================================== */
+
+fullscreenCatalogo.addEventListener(
+    "click",
+    function () {
+
+        if (
+            !document.fullscreenElement
+        ) {
+
+            modalCatalogo.requestFullscreen();
+
+        } else {
+
+            document.exitFullscreen();
+
+        }
+
+    }
+);
+
+</script>
+    
 </body>
 </html>
