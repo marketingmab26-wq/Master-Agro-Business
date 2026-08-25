@@ -1831,6 +1831,249 @@
 
 </footer>
 
+    <!-- =====================================================
+     BOTONES FLOTANTES
+===================================================== -->
+
+<!-- WHATSAPP -->
+
+<a
+    href="https://wa.me/51970859150"
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp">
+
+    <span>☏</span>
+
+</a>
+
+
+<!-- VOLVER ARRIBA -->
+
+<button
+    id="backToTop"
+    class="back-to-top"
+    aria-label="Volver arriba">
+
+    ↑
+
+</button>
+
+
+<style>
+
+    /* =====================================================
+       WHATSAPP FLOTANTE
+    ===================================================== */
+
+    .floating-whatsapp {
+
+        position: fixed;
+
+        right: 25px;
+        bottom: 25px;
+
+        width: 58px;
+        height: 58px;
+
+        border-radius: 50%;
+
+        background: #25D366;
+
+        color: white;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        z-index: 9999;
+
+        box-shadow:
+            0 8px 25px rgba(0,0,0,.20);
+
+        transition:
+            transform .25s ease,
+            box-shadow .25s ease;
+
+    }
+
+
+    .floating-whatsapp:hover {
+
+        transform:
+            translateY(-4px)
+            scale(1.05);
+
+        box-shadow:
+            0 12px 30px rgba(0,0,0,.28);
+
+    }
+
+
+    .floating-whatsapp span {
+
+        font-size: 29px;
+
+        line-height: 1;
+
+    }
+
+
+    /* =====================================================
+       VOLVER ARRIBA
+    ===================================================== */
+
+    .back-to-top {
+
+        position: fixed;
+
+        right: 25px;
+        bottom: 95px;
+
+        width: 48px;
+        height: 48px;
+
+        border: none;
+
+        border-radius: 50%;
+
+        background:
+            var(--verde);
+
+        color: white;
+
+        font-size: 22px;
+
+        font-weight: bold;
+
+        cursor: pointer;
+
+        z-index: 9998;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform:
+            translateY(15px);
+
+        transition:
+            opacity .3s ease,
+            visibility .3s ease,
+            transform .3s ease,
+            background .25s ease;
+
+        box-shadow:
+            0 8px 25px rgba(0,0,0,.18);
+
+    }
+
+
+    /* Estado visible */
+
+    .back-to-top.show {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform:
+            translateY(0);
+
+    }
+
+
+    .back-to-top:hover {
+
+        background:
+            var(--verde-oscuro);
+
+        transform:
+            translateY(-3px);
+
+    }
+
+
+    /* =====================================================
+       CELULAR
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+        .floating-whatsapp {
+
+            width: 53px;
+            height: 53px;
+
+            right: 17px;
+            bottom: 17px;
+
+        }
+
+        .floating-whatsapp span {
+
+            font-size: 26px;
+
+        }
+
+
+        .back-to-top {
+
+            width: 44px;
+            height: 44px;
+
+            right: 21px;
+            bottom: 80px;
+
+            font-size: 20px;
+
+        }
+
+    }
+
+</style>
+
+
+<script>
+
+    /* =====================================================
+       BOTÓN VOLVER ARRIBA
+    ===================================================== */
+
+    const backToTop =
+        document.getElementById("backToTop");
+
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 400) {
+
+            backToTop.classList.add("show");
+
+        } else {
+
+            backToTop.classList.remove("show");
+
+        }
+
+    });
+
+
+    backToTop.addEventListener("click", function () {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+</script>
 
 </body>
 </html>
