@@ -1,42 +1,44 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Master Agro | Soluciones para una agricultura sostenible</title>
+    <title>Master Agro | Soluciones para el Agro</title>
 
-    <meta name="description"
-          content="Master Agro Business S.A.C. Soluciones agrícolas, bioestimulantes, fertilizantes y productos para el desarrollo y protección de cultivos.">
+    <meta
+        name="description"
+        content="Master Agro Business S.A.C. Soluciones y productos para el desarrollo agrícola."
+    >
 
     <style>
 
-        /* ================================
+        /* =====================================================
            VARIABLES
-        ================================= */
+        ===================================================== */
 
         :root {
             --verde: #176b3a;
             --verde-oscuro: #0d4526;
             --verde-claro: #eaf5ed;
-            --verde-acento: #2c9b55;
 
-            --negro: #172018;
-            --gris: #66706a;
+            --negro: #151b17;
+            --gris: #68716b;
             --gris-claro: #f5f7f5;
 
             --blanco: #ffffff;
 
             --sombra:
-                0 15px 40px rgba(0,0,0,.08);
+                0 12px 35px rgba(0, 0, 0, .08);
 
             --radio: 18px;
         }
 
 
-        /* ================================
+        /* =====================================================
            RESET
-        ================================= */
+        ===================================================== */
 
         * {
             margin: 0;
@@ -50,20 +52,17 @@
 
         body {
             font-family:
-                Inter,
-                system-ui,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
+                Arial,
+                Helvetica,
                 sans-serif;
 
             color: var(--negro);
             background: var(--blanco);
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         img {
-            max-width: 100%;
+            width: 100%;
             display: block;
         }
 
@@ -72,469 +71,331 @@
             color: inherit;
         }
 
-        button {
-            font-family: inherit;
-        }
 
-
-        /* ================================
+        /* =====================================================
            HEADER
-        ================================= */
+        ===================================================== */
 
         header {
             position: fixed;
             top: 0;
             left: 0;
+
             width: 100%;
 
             z-index: 1000;
 
             background:
-                rgba(255,255,255,.94);
+                rgba(255,255,255,.96);
 
-            backdrop-filter:
-                blur(12px);
+            backdrop-filter: blur(10px);
 
             border-bottom:
-                1px solid rgba(0,0,0,.06);
+                1px solid #e8ece9;
         }
 
-        .nav {
-            max-width: 1200px;
-            margin: auto;
+        .header-container {
+            max-width: 1250px;
 
             height: 78px;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            margin: auto;
 
-            padding: 0 25px;
+            padding:
+                0 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
         }
 
+
+        /* LOGO */
+
         .logo {
+            display: flex;
+            align-items: center;
+
             font-size: 25px;
+
             font-weight: 900;
-            letter-spacing: -1px;
+
             color: var(--verde);
+
+            letter-spacing: -1px;
         }
 
         .logo span {
             color: var(--negro);
         }
 
-        nav {
+
+        /* MENU */
+
+        .menu {
             display: flex;
+
             align-items: center;
+
             gap: 30px;
         }
 
-        nav a {
+        .menu a {
             font-size: 14px;
+
             font-weight: 600;
-            color: #344039;
+
+            color: #39443d;
 
             transition: .25s;
         }
 
-        nav a:hover {
+        .menu a:hover {
             color: var(--verde);
         }
 
-        .nav-button {
+        .menu-button {
             background: var(--verde);
-            color: white;
 
-            padding: 11px 19px;
-
-            border-radius: 999px;
-
-            transition: .25s;
-        }
-
-        .nav-button:hover {
-            background: var(--verde-oscuro);
-            transform: translateY(-2px);
-        }
-
-
-        /* ================================
-           HERO
-        ================================= */
-
-        .hero {
-            min-height: 720px;
+            color: white !important;
 
             padding:
-                160px 25px 100px;
+                11px 20px;
+
+            border-radius: 30px;
+        }
+
+        .menu-button:hover {
+            background: var(--verde-oscuro);
+        }
+
+
+        /* =====================================================
+           HERO / BANNER
+        ===================================================== */
+
+        .hero {
+            margin-top: 78px;
+
+            position: relative;
+
+            width: 100%;
+
+            min-height: 570px;
+
+            overflow: hidden;
 
             background:
                 linear-gradient(
                     110deg,
-                    #edf7ef 0%,
-                    #f8fbf8 55%,
-                    #e4f1e7 100%
+                    #0d4526,
+                    #1d7b45
                 );
-
-            position: relative;
-            overflow: hidden;
         }
 
-        .hero::after {
-            content: "";
 
+        /*
+           IMAGEN DEL BANNER
+
+           Reemplazar:
+
+           assets/banner/banner-01.jpg
+
+           por el banner real.
+        */
+
+        .hero-image {
             position: absolute;
 
-            width: 550px;
-            height: 550px;
+            inset: 0;
 
-            right: -200px;
-            bottom: -200px;
+            width: 100%;
+            height: 100%;
 
-            background:
-                rgba(44,155,85,.12);
+            object-fit: cover;
 
-            border-radius: 50%;
+            opacity: .88;
         }
 
-        .hero-container {
-            max-width: 1200px;
+
+        /* Capa para mejorar lectura */
+
+        .hero-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5,35,18,.82),
+                    rgba(5,35,18,.35),
+                    rgba(5,35,18,.05)
+                );
+        }
+
+
+        .hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 1250px;
+
+            min-height: 570px;
+
             margin: auto;
 
-            display: grid;
-            grid-template-columns: 1.05fr .95fr;
+            padding:
+                80px 25px;
+
+            display: flex;
 
             align-items: center;
+        }
 
-            gap: 70px;
+        .hero-text {
+            max-width: 620px;
 
-            position: relative;
-            z-index: 2;
+            color: white;
         }
 
         .hero-label {
             display: inline-block;
 
-            background: white;
-
-            color: var(--verde);
-
             padding:
-                8px 14px;
+                7px 14px;
 
-            border-radius: 999px;
+            margin-bottom: 18px;
+
+            border:
+                1px solid rgba(255,255,255,.35);
+
+            border-radius: 30px;
 
             font-size: 12px;
-            font-weight: 800;
+
+            font-weight: 700;
 
             text-transform: uppercase;
 
             letter-spacing: 1px;
-
-            margin-bottom: 20px;
-
-            box-shadow:
-                0 8px 25px rgba(0,0,0,.06);
         }
 
         .hero h1 {
             font-size:
-                clamp(42px, 5vw, 72px);
+                clamp(40px, 5vw, 68px);
 
-            line-height: 1.03;
+            line-height: 1.02;
 
-            letter-spacing: -3px;
+            letter-spacing: -2px;
 
-            margin-bottom: 25px;
-        }
-
-        .hero h1 span {
-            color: var(--verde);
+            margin-bottom: 22px;
         }
 
         .hero p {
-            max-width: 570px;
-
             font-size: 18px;
 
-            color: var(--gris);
+            color:
+                rgba(255,255,255,.85);
 
-            margin-bottom: 35px;
+            max-width: 550px;
+
+            margin-bottom: 30px;
         }
 
-        .hero-buttons {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-
-            align-items: center;
-            justify-content: center;
+        .hero-button {
+            display: inline-block;
 
             padding:
-                14px 24px;
+                14px 25px;
 
-            border-radius: 999px;
+            background: white;
 
-            font-weight: 700;
+            color: var(--verde);
+
+            border-radius: 30px;
+
+            font-weight: 800;
 
             transition: .25s;
         }
 
-        .btn-primary {
-            background: var(--verde);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: var(--verde-oscuro);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            border:
-                1px solid #d5ddd7;
-
-            background: white;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--verde);
-            color: var(--verde);
-        }
-
-        .hero-visual {
-            min-height: 470px;
-
-            border-radius:
-                35px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #155f34,
-                    #2c9b55
-                );
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            position: relative;
-
-            overflow: hidden;
+        .hero-button:hover {
+            transform: translateY(-3px);
 
             box-shadow:
-                0 30px 70px rgba(23,107,58,.25);
-        }
-
-        .hero-visual::before {
-            content: "MASTER AGRO";
-
-            position: absolute;
-
-            font-size: 70px;
-            font-weight: 900;
-
-            color:
-                rgba(255,255,255,.08);
-
-            transform:
-                rotate(-25deg);
-
-            white-space: nowrap;
-        }
-
-        .hero-product {
-            position: relative;
-
-            width: 240px;
-            height: 330px;
-
-            background: white;
-
-            border-radius: 25px;
-
-            padding: 25px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-
-            box-shadow:
-                0 30px 50px rgba(0,0,0,.25);
-
-            transform:
-                rotate(4deg);
-        }
-
-        .hero-product strong {
-            font-size: 25px;
-            color: var(--verde);
-        }
-
-        .hero-product small {
-            display: block;
-
-            margin-top: 10px;
-
-            color: var(--gris);
-
-            font-size: 12px;
+                0 10px 30px rgba(0,0,0,.2);
         }
 
 
-        /* ================================
-           STATS
-        ================================= */
-
-        .stats {
-            background: var(--verde-oscuro);
-            color: white;
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            padding: 28px 25px;
-        }
-
-        .stat {
-            text-align: center;
-
-            padding: 12px;
-
-            border-right:
-                1px solid rgba(255,255,255,.15);
-        }
-
-        .stat:last-child {
-            border: none;
-        }
-
-        .stat strong {
-            display: block;
-
-            font-size: 25px;
-        }
-
-        .stat span {
-            font-size: 13px;
-
-            opacity: .8;
-        }
-
-
-        /* ================================
+        /* =====================================================
            SECCIONES
-        ================================= */
+        ===================================================== */
 
         section {
-            padding: 100px 25px;
+            padding:
+                90px 25px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1250px;
+
             margin: auto;
         }
 
-        .section-header {
-            max-width: 700px;
+        .section-title {
+            text-align: center;
 
-            margin-bottom: 55px;
+            margin-bottom: 50px;
         }
 
-        .section-label {
+        .section-title small {
+            display: block;
+
             color: var(--verde);
 
             font-size: 12px;
 
             font-weight: 900;
 
-            letter-spacing: 1.5px;
-
             text-transform: uppercase;
+
+            letter-spacing: 1.5px;
 
             margin-bottom: 10px;
         }
 
-        .section-header h2 {
+        .section-title h2 {
             font-size:
-                clamp(32px, 4vw, 50px);
+                clamp(32px, 4vw, 48px);
 
             line-height: 1.1;
 
-            letter-spacing: -2px;
+            letter-spacing: -1.5px;
 
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
 
-        .section-header p {
+        .section-title p {
+            max-width: 650px;
+
+            margin: auto;
+
             color: var(--gris);
 
-            font-size: 17px;
+            font-size: 16px;
         }
 
 
-        /* ================================
-           PRODUCTOS
-        ================================= */
+        /* =====================================================
+           PRODUCTOS DESTACADOS
+        ===================================================== */
 
         #productos {
-            background:
-                var(--gris-claro);
-        }
-
-        .categories {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 10px;
-
-            margin-bottom: 40px;
-        }
-
-        .category-btn {
-            border:
-                1px solid #dce4de;
-
-            background: white;
-
-            color: #455149;
-
-            padding:
-                10px 17px;
-
-            border-radius: 999px;
-
-            cursor: pointer;
-
-            font-weight: 700;
-
-            font-size: 13px;
-
-            transition: .2s;
-        }
-
-        .category-btn:hover,
-        .category-btn.active {
-            background: var(--verde);
-            border-color: var(--verde);
-            color: white;
+            background: var(--blanco);
         }
 
         .products-grid {
@@ -543,98 +404,79 @@
             grid-template-columns:
                 repeat(3, 1fr);
 
-            gap: 22px;
+            gap: 25px;
         }
+
+
+        /* TARJETA */
 
         .product-card {
             background: white;
+
+            border:
+                1px solid #e6ebe7;
 
             border-radius:
                 var(--radio);
 
             overflow: hidden;
 
-            border:
-                1px solid #e5eae6;
-
-            transition:
-                .3s;
+            transition: .3s;
 
             box-shadow:
-                0 8px 25px rgba(0,0,0,.03);
+                0 5px 20px rgba(0,0,0,.03);
         }
 
         .product-card:hover {
             transform:
-                translateY(-6px);
+                translateY(-7px);
 
             box-shadow:
                 var(--sombra);
         }
 
+
+        /* IMAGEN */
+
         .product-image {
-            height: 250px;
+            height: 300px;
 
             background:
-                linear-gradient(
-                    135deg,
-                    #e7f4ea,
-                    #d1e9d8
-                );
+                var(--gris-claro);
 
             display: flex;
 
             align-items: center;
+
             justify-content: center;
+
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
 
             padding: 25px;
+
+            transition: .35s;
         }
 
-        .fake-product {
-            width: 105px;
-            height: 170px;
-
-            border-radius: 12px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #ffffff,
-                    #e8eee9
-                );
-
-            box-shadow:
-                0 20px 25px rgba(0,0,0,.15);
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
+        .product-card:hover
+        .product-image img {
+            transform: scale(1.04);
         }
 
-        .fake-product strong {
-            color: var(--verde);
 
-            font-size: 14px;
-        }
-
-        .fake-product small {
-            color: #68746c;
-
-            font-size: 8px;
-
-            margin-top: 7px;
-        }
+        /* INFORMACIÓN */
 
         .product-info {
-            padding: 25px;
+            padding: 24px;
         }
 
-        .product-line {
+        .product-category {
             color: var(--verde);
 
             font-size: 11px;
@@ -647,10 +489,10 @@
         }
 
         .product-info h3 {
-            margin:
-                8px 0;
+            font-size: 25px;
 
-            font-size: 22px;
+            margin:
+                7px 0 10px;
         }
 
         .product-info p {
@@ -659,12 +501,16 @@
             font-size: 14px;
 
             min-height: 65px;
+
+            margin-bottom: 20px;
         }
 
-        .product-link {
-            display: inline-block;
+        .product-button {
+            display: inline-flex;
 
-            margin-top: 15px;
+            align-items: center;
+
+            gap: 7px;
 
             color: var(--verde);
 
@@ -674,318 +520,314 @@
         }
 
 
-        /* ================================
-           NOSOTROS
-        ================================= */
+        /* BOTÓN CATÁLOGO */
 
-        .about {
+        .products-button-container {
+            text-align: center;
+
+            margin-top: 45px;
+        }
+
+        .main-button {
+            display: inline-block;
+
+            padding:
+                14px 25px;
+
+            border-radius: 30px;
+
+            background: var(--verde);
+
+            color: white;
+
+            font-weight: 800;
+
+            transition: .25s;
+        }
+
+        .main-button:hover {
+            background: var(--verde-oscuro);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =====================================================
+           NOTICIAS
+        ===================================================== */
+
+        #noticias {
+            background:
+                var(--gris-claro);
+        }
+
+        .news-grid {
             display: grid;
 
             grid-template-columns:
-                .9fr 1.1fr;
+                repeat(3, 1fr);
 
-            gap: 80px;
-
-            align-items: center;
+            gap: 25px;
         }
 
-        .about-visual {
-            min-height: 470px;
+        .news-card {
+            background: white;
 
             border-radius:
-                30px;
+                var(--radio);
+
+            overflow: hidden;
+
+            border:
+                1px solid #e5e9e6;
+
+            transition: .3s;
+        }
+
+        .news-card:hover {
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                var(--sombra);
+        }
+
+        .news-image {
+            height: 220px;
 
             background:
-                linear-gradient(
-                    145deg,
-                    #123e25,
-                    #2d8d51
-                );
-
-            position: relative;
+                #e5eee7;
 
             overflow: hidden;
         }
 
-        .about-visual::after {
-            content:
-                "AGRO & VIDA";
+        .news-image img {
+            width: 100%;
+            height: 100%;
 
-            position: absolute;
-
-            bottom: 35px;
-            left: 35px;
-
-            font-size: 42px;
-
-            font-weight: 900;
-
-            color: white;
+            object-fit: cover;
         }
 
-        .about-content h2 {
-            font-size:
-                clamp(32px, 4vw, 50px);
-
-            line-height: 1.1;
-
-            letter-spacing: -2px;
-
-            margin-bottom: 25px;
+        .news-content {
+            padding: 23px;
         }
 
-        .about-content p {
-            color: var(--gris);
-
-            margin-bottom: 18px;
-
-            font-size: 16px;
-        }
-
-        .about-list {
-            margin-top: 30px;
-
-            display: grid;
-
-            gap: 16px;
-        }
-
-        .about-item {
-            display: flex;
-
-            gap: 15px;
-
-            align-items: flex-start;
-        }
-
-        .about-icon {
-            min-width: 38px;
-            height: 38px;
-
-            border-radius: 50%;
-
-            background:
-                var(--verde-claro);
-
+        .news-date {
             color: var(--verde);
 
-            display: flex;
+            font-size: 11px;
 
-            align-items: center;
-            justify-content: center;
+            font-weight: 800;
 
-            font-weight: 900;
+            text-transform: uppercase;
         }
 
-        .about-item strong {
-            display: block;
+        .news-content h3 {
+            font-size: 20px;
 
-            margin-bottom: 2px;
+            line-height: 1.25;
+
+            margin:
+                8px 0 12px;
         }
 
-        .about-item span {
+        .news-content p {
             color: var(--gris);
 
+            font-size: 14px;
+
+            margin-bottom: 15px;
+        }
+
+        .news-link {
+            color: var(--verde);
+
             font-size: 13px;
+
+            font-weight: 800;
         }
 
 
-        /* ================================
-           ISO / AMBIENTAL
-        ================================= */
+        /* =====================================================
+           CATÁLOGO VIRTUAL
+        ===================================================== */
 
-        .environment {
+        #catalogo {
+            padding:
+                0 25px 90px;
+
             background:
-                var(--verde-oscuro);
+                var(--gris-claro);
+        }
+
+        .catalog-box {
+            max-width: 1250px;
+
+            margin: auto;
+
+            min-height: 350px;
+
+            border-radius:
+                28px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    var(--verde-oscuro),
+                    var(--verde)
+                );
 
             color: white;
-        }
 
-        .environment-content {
             display: grid;
 
             grid-template-columns:
                 1.2fr .8fr;
 
-            gap: 70px;
-
             align-items: center;
+
+            padding:
+                55px 70px;
         }
 
-        .environment h2 {
-            font-size:
-                clamp(32px, 4vw, 52px);
-
-            line-height: 1.08;
-
-            letter-spacing: -2px;
-
-            margin-bottom: 20px;
-        }
-
-        .environment p {
-            color:
-                rgba(255,255,255,.75);
-
-            font-size: 17px;
-        }
-
-        .iso-card {
-            background:
-                rgba(255,255,255,.08);
-
-            border:
-                1px solid rgba(255,255,255,.15);
-
-            border-radius:
-                25px;
-
-            padding: 40px;
-
-            text-align: center;
-        }
-
-        .iso-card strong {
+        .catalog-content small {
             display: block;
 
-            font-size: 48px;
+            color: #9ed6ae;
 
-            margin-bottom: 5px;
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
         }
 
-        .iso-card span {
-            color:
-                rgba(255,255,255,.75);
-
-            font-size: 14px;
-        }
-
-
-        /* ================================
-           CONTACTO
-        ================================= */
-
-        .contact {
-            display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
-            gap: 50px;
-        }
-
-        .contact-info h2 {
+        .catalog-content h2 {
             font-size:
                 clamp(32px, 4vw, 50px);
 
-            line-height: 1.1;
+            line-height: 1.05;
 
-            letter-spacing: -2px;
-
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
-        .contact-info p {
-            color: var(--gris);
+        .catalog-content p {
+            color:
+                rgba(255,255,255,.75);
 
-            margin-bottom: 30px;
-        }
-
-        .contact-details {
-            display: grid;
-
-            gap: 18px;
-        }
-
-        .contact-item {
-            display: flex;
-
-            gap: 15px;
-
-            align-items: center;
-        }
-
-        .contact-icon {
-            width: 45px;
-            height: 45px;
-
-            border-radius: 50%;
-
-            background:
-                var(--verde-claro);
-
-            color: var(--verde);
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            font-weight: 900;
-        }
-
-        .contact-item small {
-            display: block;
-
-            color: var(--gris);
-
-            font-size: 11px;
-        }
-
-        .contact-item strong {
-            font-size: 14px;
-        }
-
-        .contact-box {
-            background:
-                var(--gris-claro);
-
-            border-radius:
-                25px;
-
-            padding: 40px;
-        }
-
-        .contact-box h3 {
-            font-size: 25px;
-
-            margin-bottom: 12px;
-        }
-
-        .contact-box p {
-            color: var(--gris);
+            max-width: 550px;
 
             margin-bottom: 25px;
         }
 
+        .catalog-buttons {
+            display: flex;
 
-        /* ================================
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+        .catalog-button {
+            display: inline-block;
+
+            padding:
+                13px 22px;
+
+            background: white;
+
+            color: var(--verde);
+
+            border-radius: 30px;
+
+            font-weight: 800;
+
+            font-size: 14px;
+        }
+
+        .catalog-button.secondary {
+            background:
+                rgba(255,255,255,.12);
+
+            color: white;
+
+            border:
+                1px solid rgba(255,255,255,.25);
+        }
+
+        .catalog-image {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+        .catalog-placeholder {
+            width: 190px;
+
+            height: 240px;
+
+            background: white;
+
+            border-radius: 10px;
+
+            transform:
+                rotate(5deg);
+
+            box-shadow:
+                0 25px 50px rgba(0,0,0,.25);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: var(--verde);
+
+            font-size: 20px;
+
+            font-weight: 900;
+        }
+
+
+        /* =====================================================
            FOOTER
-        ================================= */
+        ===================================================== */
 
         footer {
             background:
-                #0b2415;
+                #0a2415;
 
             color: white;
 
             padding:
-                55px 25px 25px;
+                65px 25px 25px;
         }
 
         .footer-grid {
-            max-width: 1200px;
+            max-width: 1250px;
 
             margin: auto;
 
             display: grid;
 
             grid-template-columns:
-                1.5fr 1fr 1fr;
+                1.5fr 1fr 1fr 1fr;
 
-            gap: 50px;
+            gap: 45px;
 
-            padding-bottom: 40px;
+            padding-bottom: 45px;
         }
 
         .footer-logo {
@@ -996,21 +838,25 @@
             margin-bottom: 15px;
         }
 
-        footer p {
+        .footer-column h4 {
+            margin-bottom: 17px;
+
+            font-size: 15px;
+        }
+
+        .footer-column p {
             color:
                 rgba(255,255,255,.6);
 
             font-size: 13px;
-        }
 
-        footer h4 {
-            margin-bottom: 15px;
+            line-height: 1.7;
         }
 
         .footer-links {
             display: grid;
 
-            gap: 8px;
+            gap: 9px;
         }
 
         .footer-links a {
@@ -1018,14 +864,56 @@
                 rgba(255,255,255,.6);
 
             font-size: 13px;
+
+            transition: .2s;
         }
 
         .footer-links a:hover {
             color: white;
         }
 
+
+        /* REDES SOCIALES */
+
+        .socials {
+            display: flex;
+
+            gap: 9px;
+
+            flex-wrap: wrap;
+        }
+
+        .social {
+            width: 40px;
+            height: 40px;
+
+            border:
+                1px solid rgba(255,255,255,.15);
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 13px;
+
+            transition: .25s;
+        }
+
+        .social:hover {
+            background: white;
+
+            color: var(--verde);
+        }
+
+
+        /* COPYRIGHT */
+
         .copyright {
-            max-width: 1200px;
+            max-width: 1250px;
 
             margin: auto;
 
@@ -1035,99 +923,91 @@
                 1px solid rgba(255,255,255,.1);
 
             color:
-                rgba(255,255,255,.45);
+                rgba(255,255,255,.4);
 
             font-size: 11px;
         }
 
 
-        /* ================================
+        /* =====================================================
            RESPONSIVE
-        ================================= */
+        ===================================================== */
 
-        @media (max-width: 900px) {
+        @media (max-width: 950px) {
 
-            nav {
+            .menu {
                 display: none;
             }
 
-            .hero-container,
-            .about,
-            .environment-content,
-            .contact {
+            .products-grid,
+            .news-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .catalog-box {
                 grid-template-columns: 1fr;
+
+                padding:
+                    45px;
             }
 
-            .hero {
-                padding-top: 130px;
+            .catalog-image {
+                display: none;
             }
 
-            .hero-visual {
-                min-height: 400px;
-            }
-
-            .products-grid {
+            .footer-grid {
                 grid-template-columns:
                     repeat(2, 1fr);
             }
-
-            .stats-container {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .stat:nth-child(2) {
-                border: none;
-            }
-
         }
 
 
         @media (max-width: 600px) {
 
             section {
-                padding: 70px 18px;
+                padding:
+                    65px 18px;
             }
 
-            .nav {
-                padding: 0 18px;
+            .header-container {
+                padding:
+                    0 18px;
+            }
+
+            .hero-content {
+                padding:
+                    60px 18px;
             }
 
             .hero {
-                padding:
-                    120px 18px 70px;
+                min-height: 520px;
+            }
+
+            .hero-content {
+                min-height: 520px;
             }
 
             .hero h1 {
-                letter-spacing: -2px;
+                font-size: 42px;
             }
 
             .hero p {
                 font-size: 16px;
             }
 
-            .products-grid {
+            .products-grid,
+            .news-grid {
                 grid-template-columns: 1fr;
             }
 
-            .stats-container {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .stat {
-                border: none;
+            .catalog-box {
+                padding:
+                    35px 25px;
             }
 
             .footer-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .about-visual {
-                min-height: 300px;
-            }
-
-            .environment-content {
-                gap: 35px;
             }
 
         }
@@ -1139,28 +1019,35 @@
 <body>
 
 
-<!-- =====================================
+<!-- =====================================================
      HEADER
-===================================== -->
+===================================================== -->
 
 <header>
 
-    <div class="nav">
+    <div class="header-container">
 
         <a href="#inicio" class="logo">
             MASTER <span>AGRO</span>
         </a>
 
-        <nav>
 
-            <a href="#inicio">Inicio</a>
+        <nav class="menu">
 
-            <a href="#productos">Productos</a>
+            <a href="#inicio">
+                Inicio
+            </a>
 
-            <a href="#nosotros">Nosotros</a>
+            <a href="#productos">
+                Productos
+            </a>
 
-            <a href="#sostenibilidad">
-                Sostenibilidad
+            <a href="#noticias">
+                Noticias
+            </a>
+
+            <a href="#catalogo">
+                Catálogo
             </a>
 
             <a href="#contacto">
@@ -1169,7 +1056,7 @@
 
             <a
                 href="#productos"
-                class="nav-button">
+                class="menu-button">
                 Ver productos
             </a>
 
@@ -1181,77 +1068,55 @@
 
 
 
-<!-- =====================================
-     HERO
-===================================== -->
+<!-- =====================================================
+     BANNER PUBLICITARIO
+===================================================== -->
 
 <main id="inicio">
 
 <section class="hero">
 
-    <div class="hero-container">
+    <!--
+        CAMBIAR ESTA IMAGEN POR EL BANNER REAL
 
-        <div>
+        assets/banner/banner-01.jpg
+    -->
+
+    <img
+        class="hero-image"
+        src="assets/banner/banner-01.jpg"
+        alt="Master Agro">
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content">
+
+        <div class="hero-text">
 
             <span class="hero-label">
-                Soluciones para la agricultura
+                Master Agro
             </span>
 
             <h1>
-                Innovación para
-                <span>
-                    cultivos más fuertes.
-                </span>
+                Soluciones para
+                el desarrollo
+                agrícola.
             </h1>
 
             <p>
-                Desarrollamos y comercializamos soluciones
-                agrícolas orientadas a la nutrición,
-                bioestimulación y fortalecimiento de los
-                cultivos.
+                Conocé nuestras soluciones y productos
+                desarrollados para acompañar las
+                necesidades del sector agrícola.
             </p>
 
-            <div class="hero-buttons">
+            <a
+                href="#productos"
+                class="hero-button">
 
-                <a
-                    href="#productos"
-                    class="btn btn-primary">
+                Conocer productos →
 
-                    Explorar productos
-
-                </a>
-
-                <a
-                    href="#contacto"
-                    class="btn btn-secondary">
-
-                    Hablar con un especialista
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="hero-visual">
-
-            <div class="hero-product">
-
-                <div>
-
-                    <strong>
-                        MASTER<br>
-                        AGRO
-                    </strong>
-
-                    <small>
-                        Agro & Vida
-                    </small>
-
-                </div>
-
-            </div>
+            </a>
 
         </div>
 
@@ -1261,283 +1126,51 @@
 
 
 
-<!-- =====================================
-     STATS
-===================================== -->
-
-<div class="stats">
-
-    <div class="stats-container">
-
-        <div class="stat">
-
-            <strong>8</strong>
-
-            <span>
-                Líneas de productos
-            </span>
-
-        </div>
-
-
-        <div class="stat">
-
-            <strong>+30</strong>
-
-            <span>
-                Soluciones agrícolas
-            </span>
-
-        </div>
-
-
-        <div class="stat">
-
-            <strong>ISO</strong>
-
-            <span>
-                Gestión ambiental
-            </span>
-
-        </div>
-
-
-        <div class="stat">
-
-            <strong>Perú</strong>
-
-            <span>
-                Tecnología para el agro
-            </span>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================
-     PRODUCTOS
-===================================== -->
+<!-- =====================================================
+     PRODUCTOS DESTACADOS
+===================================================== -->
 
 <section id="productos">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-title">
 
-            <div class="section-label">
-                Catálogo
-            </div>
+            <small>
+                Productos destacados
+            </small>
 
             <h2>
-                Soluciones para cada etapa del cultivo.
+                Nuestras soluciones
             </h2>
 
             <p>
-                Conocé nuestras líneas de productos y
-                encontrá la solución adecuada para tus
-                necesidades agrícolas.
+                Conocé algunos de los productos destacados
+                de Master Agro.
             </p>
 
         </div>
 
 
-        <div class="categories">
-
-            <button
-                class="category-btn active"
-                onclick="filterProducts('todos', this)">
-                Todos
-            </button>
-
-            <button
-                class="category-btn"
-                onclick="filterProducts('express', this)">
-                Express
-            </button>
-
-            <button
-                class="category-btn"
-                onclick="filterProducts('inmuno', this)">
-                Inmunobioinductor
-            </button>
-
-            <button
-                class="category-btn"
-                onclick="filterProducts('elicitores', this)">
-                Elicitores
-            </button>
-
-            <button
-                class="category-btn"
-                onclick="filterProducts('aminosate', this)">
-                Aminosate
-            </button>
-
-            <button
-                class="category-btn"
-                onclick="filterProducts('premium', this)">
-                Premium
-            </button>
-
-            <button
-                class="category-btn"
-                onclick="filterProducts('foltec', this)">
-                Foltec
-            </button>
-
-            <button
-                class="category-btn"
-                onclick="filterProducts('etacel', this)">
-                Etacel
-            </button>
-
-            <button
-                class="category-btn"
-                onclick="filterProducts('blacklife', this)">
-                Black Life
-            </button>
-
-        </div>
-
-
-        <div class="products-grid" id="productsGrid">
-
-
-            <!-- ALGAS EXPRESS -->
-
-            <article
-                class="product-card"
-                data-category="express">
-
-                <div class="product-image">
-
-                    <div class="fake-product">
-
-                        <strong>
-                            ALGAS<br>
-                            EXPRESS
-                        </strong>
-
-                        <small>
-                            Bioactivador
-                            fisiológico
-                        </small>
-
-                    </div>
-
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-line">
-                        Línea Express
-                    </span>
-
-                    <h3>
-                        Algas Express
-                    </h3>
-
-                    <p>
-                        Bioactivador fisiológico
-                        estructural, antiestresante
-                        y biosanitario a base de
-                        extracto de algas marinas.
-                    </p>
-
-                    <a
-                        href="#"
-                        class="product-link">
-                        Ver producto →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- PROBION -->
-
-            <article
-                class="product-card"
-                data-category="express">
-
-                <div class="product-image">
-
-                    <div class="fake-product">
-
-                        <strong>
-                            PROBION
-                        </strong>
-
-                        <small>
-                            Bioactivador
-                            fisiológico
-                        </small>
-
-                    </div>
-
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-line">
-                        Línea Express
-                    </span>
-
-                    <h3>
-                        Probion
-                    </h3>
-
-                    <p>
-                        Fertilizante líquido
-                        bioactivador producido
-                        biológicamente a partir
-                        de aminoácidos y péptidos.
-                    </p>
-
-                    <a
-                        href="#"
-                        class="product-link">
-                        Ver producto →
-                    </a>
-
-                </div>
-
-            </article>
-
+        <div class="products-grid">
 
 
             <!-- RIZOMA -->
 
-            <article
-                class="product-card"
-                data-category="express">
+            <article class="product-card">
 
                 <div class="product-image">
 
-                    <div class="fake-product">
-
-                        <strong>
-                            RIZOMA
-                        </strong>
-
-                        <small>
-                            Bioestimulante
-                        </small>
-
-                    </div>
+                    <img
+                        src="assets/productos/rizoma.png"
+                        alt="Rizoma">
 
                 </div>
 
                 <div class="product-info">
 
-                    <span class="product-line">
-                        Línea Express
+                    <span class="product-category">
+                        Producto destacado
                     </span>
 
                     <h3>
@@ -1545,15 +1178,17 @@
                     </h3>
 
                     <p>
-                        Solución basada en aminoácidos
-                        involucrados en procesos
-                        metabólicos y desarrollo vegetal.
+                        Solución especializada de
+                        Master Agro para acompañar
+                        el desarrollo del cultivo.
                     </p>
 
                     <a
-                        href="#"
-                        class="product-link">
+                        href="producto.html?producto=rizoma"
+                        class="product-button">
+
                         Ver producto →
+
                     </a>
 
                 </div>
@@ -1562,49 +1197,39 @@
 
 
 
-            <!-- SICARIO -->
+            <!-- LOTUSS -->
 
-            <article
-                class="product-card"
-                data-category="inmuno">
+            <article class="product-card">
 
                 <div class="product-image">
 
-                    <div class="fake-product">
-
-                        <strong>
-                            SICARIO
-                        </strong>
-
-                        <small>
-                            Activador
-                            inmunológico
-                        </small>
-
-                    </div>
+                    <img
+                        src="assets/productos/lotuss.png"
+                        alt="Lotuss">
 
                 </div>
 
                 <div class="product-info">
 
-                    <span class="product-line">
-                        Línea Inmunobioinductor
+                    <span class="product-category">
+                        Producto destacado
                     </span>
 
                     <h3>
-                        Sicario
+                        Lotuss
                     </h3>
 
                     <p>
-                        Activador líquido del
-                        sistema inmunológico
-                        de la planta.
+                        Solución agrícola de
+                        Master Agro.
                     </p>
 
                     <a
-                        href="#"
-                        class="product-link">
+                        href="producto.html?producto=lotuss"
+                        class="product-button">
+
                         Ver producto →
+
                     </a>
 
                 </div>
@@ -1613,49 +1238,39 @@
 
 
 
-            <!-- ORBIX -->
+            <!-- SYMBIOSIS -->
 
-            <article
-                class="product-card"
-                data-category="inmuno">
+            <article class="product-card">
 
                 <div class="product-image">
 
-                    <div class="fake-product">
-
-                        <strong>
-                            ORBIX
-                        </strong>
-
-                        <small>
-                            Potencializador
-                            inmunológico
-                        </small>
-
-                    </div>
+                    <img
+                        src="assets/productos/symbiosis.png"
+                        alt="Symbiosis">
 
                 </div>
 
                 <div class="product-info">
 
-                    <span class="product-line">
-                        Línea Inmunobioinductor
+                    <span class="product-category">
+                        Producto destacado
                     </span>
 
                     <h3>
-                        Orbix
+                        Symbiosis
                     </h3>
 
                     <p>
-                        Bioinductor líquido del
-                        sistema inmunológico
-                        de la planta.
+                        Solución agrícola desarrollada
+                        para las necesidades del cultivo.
                     </p>
 
                     <a
-                        href="#"
-                        class="product-link">
+                        href="producto.html?producto=symbiosis"
+                        class="product-button">
+
                         Ver producto →
+
                     </a>
 
                 </div>
@@ -1666,30 +1281,20 @@
 
             <!-- VENONAT -->
 
-            <article
-                class="product-card"
-                data-category="inmuno">
+            <article class="product-card">
 
                 <div class="product-image">
 
-                    <div class="fake-product">
-
-                        <strong>
-                            VENONAT
-                        </strong>
-
-                        <small>
-                            Activador vegetal
-                        </small>
-
-                    </div>
+                    <img
+                        src="assets/productos/venonat.png"
+                        alt="Venonat">
 
                 </div>
 
                 <div class="product-info">
 
-                    <span class="product-line">
-                        Línea Inmunobioinductor
+                    <span class="product-category">
+                        Producto destacado
                     </span>
 
                     <h3>
@@ -1697,15 +1302,17 @@
                     </h3>
 
                     <p>
-                        Activador del sistema
-                        inmunológico vegetal
-                        a base de extractos vegetales.
+                        Solución especializada de
+                        Master Agro para el manejo
+                        del cultivo.
                     </p>
 
                     <a
-                        href="#"
-                        class="product-link">
+                        href="producto.html?producto=venonat"
+                        class="product-button">
+
                         Ver producto →
+
                     </a>
 
                 </div>
@@ -1714,50 +1321,40 @@
 
 
 
-            <!-- AMINOSATE MG -->
+            <!-- ORBIX -->
 
-            <article
-                class="product-card"
-                data-category="aminosate">
+            <article class="product-card">
 
                 <div class="product-image">
 
-                    <div class="fake-product">
-
-                        <strong>
-                            AMINOSATE
-                            MG
-                        </strong>
-
-                        <small>
-                            Nutrición
-                            vegetal
-                        </small>
-
-                    </div>
+                    <img
+                        src="assets/productos/orbix.png"
+                        alt="Orbix">
 
                 </div>
 
                 <div class="product-info">
 
-                    <span class="product-line">
-                        Línea Aminosate
+                    <span class="product-category">
+                        Producto destacado
                     </span>
 
                     <h3>
-                        Aminosate MG
+                        Orbix
                     </h3>
 
                     <p>
-                        Fertilizante líquido donde
-                        el magnesio forma parte
-                        de una cadena de aminoácidos.
+                        Bioinductor especializado
+                        para el desarrollo y respuesta
+                        del cultivo.
                     </p>
 
                     <a
-                        href="#"
-                        class="product-link">
+                        href="producto.html?producto=orbix"
+                        class="product-button">
+
                         Ver producto →
+
                     </a>
 
                 </div>
@@ -1766,49 +1363,130 @@
 
 
 
-            <!-- FOLTEC -->
+            <!-- SALICINA -->
 
-            <article
-                class="product-card"
-                data-category="foltec">
+            <article class="product-card">
 
                 <div class="product-image">
 
-                    <div class="fake-product">
-
-                        <strong>
-                            FOLTEC
-                        </strong>
-
-                        <small>
-                            Fertilizante
-                            foliar
-                        </small>
-
-                    </div>
+                    <img
+                        src="assets/productos/salicina.png"
+                        alt="Salicina">
 
                 </div>
 
                 <div class="product-info">
 
-                    <span class="product-line">
-                        Línea Foltec
+                    <span class="product-category">
+                        Producto destacado
                     </span>
 
                     <h3>
-                        Foltec
+                        Salicina
                     </h3>
 
                     <p>
-                        Soluciones de nutrición
-                        foliar para acompañar
-                        el desarrollo del cultivo.
+                        Solución agrícola de
+                        Master Agro.
+                    </p>
+
+                    <a
+                        href="producto.html?producto=salicina"
+                        class="product-button">
+
+                        Ver producto →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="products-button-container">
+
+            <a
+                href="productos.html"
+                class="main-button">
+
+                Ver todo el catálogo →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ÚLTIMAS NOTICIAS
+===================================================== -->
+
+<section id="noticias">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>
+                Actualidad
+            </small>
+
+            <h2>
+                Últimas noticias
+            </h2>
+
+            <p>
+                Conocé las novedades, actividades y
+                noticias de Master Agro.
+            </p>
+
+        </div>
+
+
+        <div class="news-grid">
+
+
+            <!-- NOTICIA 1 -->
+
+            <article class="news-card">
+
+                <div class="news-image">
+
+                    <img
+                        src="assets/noticias/noticia-01.jpg"
+                        alt="Noticia Master Agro">
+
+                </div>
+
+                <div class="news-content">
+
+                    <span class="news-date">
+                        2026
+                    </span>
+
+                    <h3>
+                        Taller de Difusión
+                        ISO 14001:2015
+                    </h3>
+
+                    <p>
+                        Conocé las últimas actividades
+                        y novedades de Master Agro.
                     </p>
 
                     <a
                         href="#"
-                        class="product-link">
-                        Ver producto →
+                        class="news-link">
+
+                        Leer noticia →
+
                     </a>
 
                 </div>
@@ -1817,49 +1495,81 @@
 
 
 
-            <!-- ROOT HUMICS -->
+            <!-- NOTICIA 2 -->
 
-            <article
-                class="product-card"
-                data-category="blacklife">
+            <article class="news-card">
 
-                <div class="product-image">
+                <div class="news-image">
 
-                    <div class="fake-product">
-
-                        <strong>
-                            ROOT
-                            HUMICS
-                        </strong>
-
-                        <small>
-                            Black Life
-                        </small>
-
-                    </div>
+                    <img
+                        src="assets/noticias/noticia-02.jpg"
+                        alt="Noticia Master Agro">
 
                 </div>
 
-                <div class="product-info">
+                <div class="news-content">
 
-                    <span class="product-line">
-                        Línea Black Life
+                    <span class="news-date">
+                        2026
                     </span>
 
                     <h3>
-                        Root Humics 20
+                        ISO 14001:2015
                     </h3>
 
                     <p>
-                        Solución perteneciente
-                        a la línea Black Life
-                        de Master Agro.
+                        Información y novedades sobre
+                        el compromiso ambiental de
+                        Master Agro.
                     </p>
 
                     <a
                         href="#"
-                        class="product-link">
-                        Ver producto →
+                        class="news-link">
+
+                        Leer noticia →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- NOTICIA 3 -->
+
+            <article class="news-card">
+
+                <div class="news-image">
+
+                    <img
+                        src="assets/noticias/noticia-03.jpg"
+                        alt="Noticias agrícolas">
+
+                </div>
+
+                <div class="news-content">
+
+                    <span class="news-date">
+                        Noticias
+                    </span>
+
+                    <h3>
+                        Novedades Master Agro
+                    </h3>
+
+                    <p>
+                        Descubrí las últimas novedades
+                        de nuestra empresa.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="news-link">
+
+                        Leer noticia →
+
                     </a>
 
                 </div>
@@ -1875,301 +1585,68 @@
 
 
 
-<!-- =====================================
-     NOSOTROS
-===================================== -->
+<!-- =====================================================
+     CATÁLOGO VIRTUAL
+===================================================== -->
 
-<section id="nosotros">
+<section id="catalogo">
 
-    <div class="container">
+    <div class="catalog-box">
 
-        <div class="about">
+        <div class="catalog-content">
 
-            <div class="about-visual"></div>
+            <small>
+                Catálogo virtual
+            </small>
 
+            <h2>
+                Conocé todas nuestras
+                soluciones.
+            </h2>
 
-            <div class="about-content">
+            <p>
+                Explorá nuestro catálogo virtual y
+                encontrá información de nuestros
+                productos, líneas y soluciones agrícolas.
+            </p>
 
-                <div class="section-label">
-                    Master Agro
-                </div>
+            <div class="catalog-buttons">
 
-                <h2>
-                    Tecnología y conocimiento
-                    al servicio del agro.
-                </h2>
-
-                <p>
-                    Master Agro Business S.A.C. se dedica
-                    a la fabricación, venta y distribución
-                    de soluciones para el sector agropecuario.
-                </p>
-
-                <p>
-                    Nuestra propuesta busca atender las
-                    necesidades nutricionales y fisiológicas
-                    de los cultivos mediante productos
-                    especializados e innovación agrícola.
-                </p>
-
-
-                <div class="about-list">
-
-                    <div class="about-item">
-
-                        <div class="about-icon">
-                            ✓
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                Innovación
-                            </strong>
-
-                            <span>
-                                Desarrollo de soluciones
-                                orientadas a las necesidades
-                                del agricultor.
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="about-item">
-
-                        <div class="about-icon">
-                            ✓
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                Especialización
-                            </strong>
-
-                            <span>
-                                Productos enfocados en
-                                nutrición, bioestimulación
-                                y fortalecimiento vegetal.
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="about-item">
-
-                        <div class="about-icon">
-                            ✓
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                Compromiso
-                            </strong>
-
-                            <span>
-                                Enfoque profesional y
-                                responsable hacia nuestros
-                                clientes y el medio ambiente.
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================
-     SOSTENIBILIDAD
-===================================== -->
-
-<section
-    id="sostenibilidad"
-    class="environment">
-
-    <div class="container">
-
-        <div class="environment-content">
-
-            <div>
-
-                <div class="section-label"
-                     style="color:#8bd39f;">
-
-                    Compromiso ambiental
-
-                </div>
-
-                <h2>
-                    Crecer cuidando
-                    nuestro entorno.
-                </h2>
-
-                <p>
-                    Master Agro reafirma su compromiso
-                    con la gestión ambiental y el desarrollo
-                    de procesos orientados a minimizar
-                    el impacto sobre nuestro entorno.
-                </p>
-
-            </div>
-
-
-            <div class="iso-card">
-
-                <strong>
-                    ISO
-                </strong>
-
-                <span>
-                    Sistema de Gestión Ambiental
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================
-     CONTACTO
-===================================== -->
-
-<section id="contacto">
-
-    <div class="container">
-
-        <div class="contact">
-
-            <div class="contact-info">
-
-                <div class="section-label">
-                    Contacto
-                </div>
-
-                <h2>
-                    ¿Necesitás asesoría
-                    para tu cultivo?
-                </h2>
-
-                <p>
-                    Ponete en contacto con nuestro equipo
-                    para conocer nuestras soluciones
-                    agrícolas.
-                </p>
-
-
-                <div class="contact-details">
-
-
-                    <div class="contact-item">
-
-                        <div class="contact-icon">
-                            ☎
-                        </div>
-
-                        <div>
-
-                            <small>
-                                Teléfono
-                            </small>
-
-                            <strong>
-                                +51 1 757 0327
-                            </strong>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="contact-item">
-
-                        <div class="contact-icon">
-                            📍
-                        </div>
-
-                        <div>
-
-                            <small>
-                                Dirección
-                            </small>
-
-                            <strong>
-                                Jr. José Manuel Iturregui
-                                N.º 119, Surquillo - Lima
-                            </strong>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="contact-item">
-
-                        <div class="contact-icon">
-                            🌐
-                        </div>
-
-                        <div>
-
-                            <small>
-                                Sitio web
-                            </small>
-
-                            <strong>
-                                masteragro.mx
-                            </strong>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="contact-box">
-
-                <h3>
-                    Encontrá la solución
-                    adecuada.
-                </h3>
-
-                <p>
-                    Explorá nuestro catálogo y conocé
-                    las características, recomendaciones
-                    y documentación técnica de cada producto.
-                </p>
+                <!--
+                    CAMBIAR EL ENLACE POR EL PDF REAL
+                -->
 
                 <a
-                    href="#productos"
-                    class="btn btn-primary">
+                    href="documentos/catalogo-master-agro.pdf"
+                    target="_blank"
+                    class="catalog-button">
 
-                    Ver catálogo
+                    Ver catálogo →
 
                 </a>
+
+
+                <a
+                    href="documentos/catalogo-master-agro.pdf"
+                    download
+                    class="catalog-button secondary">
+
+                    Descargar PDF
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="catalog-image">
+
+            <div class="catalog-placeholder">
+
+                MASTER<br>
+                AGRO<br><br>
+                CATÁLOGO
 
             </div>
 
@@ -2183,33 +1660,73 @@
 
 
 
-<!-- =====================================
+<!-- =====================================================
      FOOTER
-===================================== -->
+===================================================== -->
 
-<footer>
+<footer id="contacto">
 
     <div class="footer-grid">
 
-        <div>
+
+        <!-- EMPRESA -->
+
+        <div class="footer-column">
 
             <div class="footer-logo">
                 MASTER AGRO
             </div>
 
             <p>
-                Soluciones agrícolas orientadas a la
-                nutrición, bioestimulación y fortalecimiento
-                de los cultivos.
+                Soluciones agrícolas para acompañar
+                el desarrollo y las necesidades del
+                sector agropecuario.
             </p>
 
         </div>
 
 
-        <div>
+
+        <!-- CONTACTO -->
+
+        <div class="footer-column">
 
             <h4>
-                Navegación
+                Contacto
+            </h4>
+
+            <div class="footer-links">
+
+                <!-- REEMPLAZAR POR DATOS OFICIALES -->
+
+                <p>
+                    📍 Dirección de Master Agro
+                </p>
+
+                <p>
+                    ☎ Teléfono
+                </p>
+
+                <p>
+                    ✉ Correo electrónico
+                </p>
+
+                <p>
+                    💬 WhatsApp
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ENLACES -->
+
+        <div class="footer-column">
+
+            <h4>
+                Enlaces
             </h4>
 
             <div class="footer-links">
@@ -2222,12 +1739,12 @@
                     Productos
                 </a>
 
-                <a href="#nosotros">
-                    Nosotros
+                <a href="#noticias">
+                    Noticias
                 </a>
 
-                <a href="#sostenibilidad">
-                    Sostenibilidad
+                <a href="#catalogo">
+                    Catálogo
                 </a>
 
                 <a href="#contacto">
@@ -2239,32 +1756,64 @@
         </div>
 
 
-        <div>
+
+        <!-- REDES -->
+
+        <div class="footer-column">
 
             <h4>
-                Productos
+                Síguenos
             </h4>
 
-            <div class="footer-links">
+            <p style="margin-bottom:15px;">
+                Encontranos en nuestras redes sociales.
+            </p>
 
-                <a href="#productos">
-                    Línea Express
+
+            <div class="socials">
+
+                <!--
+                    REEMPLAZAR # POR LAS URL REALES
+                -->
+
+                <a
+                    href="#"
+                    class="social"
+                    target="_blank"
+                    aria-label="Facebook">
+                    f
                 </a>
 
-                <a href="#productos">
-                    Inmunobioinductor
+                <a
+                    href="#"
+                    class="social"
+                    target="_blank"
+                    aria-label="Instagram">
+                    ig
                 </a>
 
-                <a href="#productos">
-                    Elicitores
+                <a
+                    href="#"
+                    class="social"
+                    target="_blank"
+                    aria-label="LinkedIn">
+                    in
                 </a>
 
-                <a href="#productos">
-                    Aminosate
+                <a
+                    href="#"
+                    class="social"
+                    target="_blank"
+                    aria-label="TikTok">
+                    tk
                 </a>
 
-                <a href="#productos">
-                    Black Life
+                <a
+                    href="#"
+                    class="social"
+                    target="_blank"
+                    aria-label="WhatsApp">
+                    wa
                 </a>
 
             </div>
@@ -2282,64 +1831,6 @@
     </div>
 
 </footer>
-
-
-
-<!-- =====================================
-     JAVASCRIPT
-===================================== -->
-
-<script>
-
-function filterProducts(category, button) {
-
-    /*
-     * Cambiar botón activo
-     */
-
-    document
-        .querySelectorAll(".category-btn")
-        .forEach(btn => {
-
-            btn.classList.remove("active");
-
-        });
-
-    button.classList.add("active");
-
-
-    /*
-     * Filtrar productos
-     */
-
-    const products =
-        document.querySelectorAll(".product-card");
-
-
-    products.forEach(product => {
-
-        const productCategory =
-            product.dataset.category;
-
-
-        if (
-            category === "todos" ||
-            productCategory === category
-        ) {
-
-            product.style.display = "";
-
-        } else {
-
-            product.style.display = "none";
-
-        }
-
-    });
-
-}
-
-</script>
 
 
 </body>
