@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Taller de Difusión ISO 14001:2015 | Master Agro
+</title>
+
+<meta
+    name="description"
+    content="Master Agro realizó un taller de difusión sobre la norma ISO 14001:2015 y su importancia para la gestión ambiental."
+>
+
+<style>
+
+    /* =====================================================
+       VARIABLES
+    ===================================================== */
+
+    :root {
+
+        --verde: #176b3a;
+
+        --verde-oscuro: #0d4526;
+
+        --verde-claro: #eaf5ed;
+
+        --negro: #151b17;
+
+        --gris: #68716b;
+
+        --gris-claro: #f5f7f5;
+
+        --blanco: #ffffff;
+
+        --sombra:
+            0 12px 35px rgba(0,0,0,.08);
+
+        --radio: 18px;
+
+    }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+
+    }
+
+
+    html {
+
+        scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+        font-family:
+            Arial,
+            Helvetica,
+            sans-serif;
+
+        color:
+            var(--negro);
+
+        background:
+            var(--blanco);
+
+        line-height:
+            1.6;
+
+    }
+
+
+    img {
+
+        width: 100%;
+
+        display: block;
+
+    }
+
+
+    a {
+
+        text-decoration: none;
+
+        color: inherit;
+
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    header {
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        z-index: 1000;
+
+        background:
+            rgba(255,255,255,.96);
+
+        backdrop-filter:
+            blur(10px);
+
+        border-bottom:
+            1px solid #e8ece9;
+
+    }
+
+
+    .header-container {
+
+        max-width: 1250px;
+
+        height: 78px;
+
+        margin: auto;
+
+        padding:
+            0 25px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+    }
+
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
+    .logo {
+
+        display: flex;
+
+        align-items: center;
+
+        font-size: 25px;
+
+        font-weight: 900;
+
+        color:
+            var(--verde);
+
+        letter-spacing:
+            -1px;
+
+    }
+
+
+    .logo span {
+
+        color:
+            var(--negro);
+
+    }
+
+
+    /* =====================================================
+       MENU
+    ===================================================== */
+
+    .menu {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 30px;
+
+    }
+
+
+    .menu a {
+
+        font-size: 14px;
+
+        font-weight: 600;
+
+        color:
+            #39443d;
+
+        transition:
+            .25s;
+
+    }
+
+
+    .menu a:hover {
+
+        color:
+            var(--verde);
+
+    }
+
+
+    .menu-button {
+
+        background:
+            var(--verde);
+
+        color:
+            white !important;
+
+        padding:
+            11px 20px;
+
+        border-radius:
+            30px;
+
+    }
+
+
+    .menu-button:hover {
+
+        background:
+            var(--verde-oscuro);
+
+    }
+
+
+    /* =====================================================
+       CONTENIDO PRINCIPAL
+    ===================================================== */
+
+    main {
+
+        padding-top:
+            78px;
+
+    }
+
+
+    /* =====================================================
+       CABECERA DE NOTICIA
+    ===================================================== */
+
+    .article-header {
+
+        background:
+            var(--gris-claro);
+
+        padding:
+            90px 25px 65px;
+
+        text-align:
+            center;
+
+    }
+
+
+    .article-header-content {
+
+        max-width:
+            900px;
+
+        margin:
+            auto;
+
+    }
+
+
+    .article-category {
+
+        display:
+            inline-block;
+
+        color:
+            var(--verde);
+
+        font-size:
+            12px;
+
+        font-weight:
+            900;
+
+        text-transform:
+            uppercase;
+
+        letter-spacing:
+            1.5px;
+
+        margin-bottom:
+            15px;
+
+    }
+
+
+    .article-header h1 {
+
+        font-size:
+            clamp(34px, 5vw, 58px);
+
+        line-height:
+            1.08;
+
+        letter-spacing:
+            -1.8px;
+
+        margin-bottom:
+            20px;
+
+    }
+
+
+    .article-date {
+
+        color:
+            var(--gris);
+
+        font-size:
+            14px;
+
+    }
+
+
+    /* =====================================================
+       ARTÍCULO
+    ===================================================== */
+
+    .article-section {
+
+        padding:
+            70px 25px 90px;
+
+    }
+
+
+    .article-container {
+
+        max-width:
+            900px;
+
+        margin:
+            auto;
+
+    }
+
+
+    /* =====================================================
+       IMAGEN PRINCIPAL
+    ===================================================== */
+
+    .article-image {
+
+        width:
+            100%;
+
+        max-height:
+            550px;
+
+        overflow:
+            hidden;
+
+        border-radius:
+            22px;
+
+        margin-bottom:
+            50px;
+
+        box-shadow:
+            var(--sombra);
+
+        background:
+            var(--gris-claro);
+
+    }
+
+
+    .article-image img {
+
+        width:
+            100%;
+
+        height:
+            auto;
+
+        max-height:
+            550px;
+
+        object-fit:
+            cover;
+
+    }
+
+
+    /* =====================================================
+       CONTENIDO
+    ===================================================== */
+
+    .article-content {
+
+        font-size:
+            17px;
+
+        color:
+            #39443d;
+
+    }
+
+
+    .article-content p {
+
+        margin-bottom:
+            25px;
+
+    }
+
+
+    .article-content h2 {
+
+        color:
+            var(--negro);
+
+        font-size:
+            30px;
+
+        line-height:
+            1.2;
+
+        margin:
+            45px 0 18px;
+
+    }
+
+
+    .article-content h3 {
+
+        color:
+            var(--verde);
+
+        font-size:
+            21px;
+
+        margin:
+            30px 0 12px;
+
+    }
+
+
+    .article-content strong {
+
+        color:
+            var(--negro);
+
+    }
+
+
+    .article-content ul {
+
+        margin:
+            20px 0 30px 25px;
+
+    }
+
+
+    .article-content li {
+
+        margin-bottom:
+            10px;
+
+    }
+
+
+    /* =====================================================
+       DESTACADO
+    ===================================================== */
+
+    .article-highlight {
+
+        margin:
+            40px 0;
+
+        padding:
+            30px;
+
+        background:
+            var(--verde-claro);
+
+        border-left:
+            5px solid var(--verde);
+
+        border-radius:
+            0 15px 15px 0;
+
+    }
+
+
+    .article-highlight p {
+
+        margin:
+            0;
+
+        color:
+            var(--verde-oscuro);
+
+        font-weight:
+            600;
+
+    }
+
+
+    /* =====================================================
+       SEPARADOR
+    ===================================================== */
+
+    .article-divider {
+
+        height:
+            1px;
+
+        background:
+            #e5e9e6;
+
+        margin:
+            50px 0 30px;
+
+    }
+
+
+    /* =====================================================
+       VOLVER A NOTICIAS
+    ===================================================== */
+
+    .back-news {
+
+        display:
+            inline-flex;
+
+        align-items:
+            center;
+
+        gap:
+            8px;
+
+        padding:
+            13px 21px;
+
+        border-radius:
+            30px;
+
+        background:
+            var(--verde);
+
+        color:
+            white;
+
+        font-size:
+            14px;
+
+        font-weight:
+            800;
+
+        transition:
+            .25s;
+
+    }
+
+
+    .back-news:hover {
+
+        background:
+            var(--verde-oscuro);
+
+        transform:
+            translateY(-2px);
+
+    }
+
+
+    /* =====================================================
+       NOTICIAS RELACIONADAS
+    ===================================================== */
+
+    .related {
+
+        background:
+            var(--gris-claro);
+
+        padding:
+            80px 25px;
+
+    }
+
+
+    .related-container {
+
+        max-width:
+            1250px;
+
+        margin:
+            auto;
+
+    }
+
+
+    .related-title {
+
+        text-align:
+            center;
+
+        margin-bottom:
+            40px;
+
+    }
+
+
+    .related-title small {
+
+        display:
+            block;
+
+        color:
+            var(--verde);
+
+        font-size:
+            12px;
+
+        font-weight:
+            900;
+
+        text-transform:
+            uppercase;
+
+        letter-spacing:
+            1.5px;
+
+        margin-bottom:
+            10px;
+
+    }
+
+
+    .related-title h2 {
+
+        font-size:
+            clamp(30px,4vw,42px);
+
+        letter-spacing:
+            -1px;
+
+    }
+
+
+    .related-grid {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:
+            25px;
+
+        max-width:
+            850px;
+
+        margin:
+            auto;
+
+    }
+
+
+    .related-card {
+
+        background:
+            white;
+
+        border:
+            1px solid #e5e9e6;
+
+        border-radius:
+            var(--radio);
+
+        overflow:
+            hidden;
+
+        transition:
+            .3s;
+
+    }
+
+
+    .related-card:hover {
+
+        transform:
+            translateY(-5px);
+
+        box-shadow:
+            var(--sombra);
+
+    }
+
+
+    .related-image {
+
+        height:
+            220px;
+
+        overflow:
+            hidden;
+
+        background:
+            #e5eee7;
+
+    }
+
+
+    .related-image img {
+
+        width:
+            100%;
+
+        height:
+            100%;
+
+        object-fit:
+            cover;
+
+        transition:
+            .3s;
+
+    }
+
+
+    .related-card:hover
+    .related-image img {
+
+        transform:
+            scale(1.04);
+
+    }
+
+
+    .related-content {
+
+        padding:
+            22px;
+
+    }
+
+
+    .related-content span {
+
+        color:
+            var(--verde);
+
+        font-size:
+            11px;
+
+        font-weight:
+            900;
+
+        text-transform:
+            uppercase;
+
+    }
+
+
+    .related-content h3 {
+
+        font-size:
+            20px;
+
+        line-height:
+            1.25;
+
+        margin:
+            8px 0 15px;
+
+    }
+
+
+    .related-link {
+
+        color:
+            var(--verde);
+
+        font-size:
+            13px;
+
+        font-weight:
+            800;
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+
+        background:
+            #0a2415;
+
+        color:
+            white;
+
+        padding:
+            65px 25px 25px;
+
+    }
+
+
+    .footer-grid {
+
+        max-width:
+            1250px;
+
+        margin:
+            auto;
+
+        display:
+            grid;
+
+        grid-template-columns:
+            1.5fr 1fr 1fr 1fr;
+
+        gap:
+            45px;
+
+        padding-bottom:
+            45px;
+
+    }
+
+
+    .footer-logo {
+
+        font-size:
+            25px;
+
+        font-weight:
+            900;
+
+        margin-bottom:
+            15px;
+
+    }
+
+
+    .footer-column h4 {
+
+        margin-bottom:
+            17px;
+
+        font-size:
+            15px;
+
+    }
+
+
+    .footer-column p {
+
+        color:
+            rgba(255,255,255,.6);
+
+        font-size:
+            13px;
+
+        line-height:
+            1.7;
+
+    }
+
+
+    .footer-links {
+
+        display:
+            grid;
+
+        gap:
+            9px;
+
+    }
+
+
+    .footer-links a {
+
+        color:
+            rgba(255,255,255,.6);
+
+        font-size:
+            13px;
+
+        transition:
+            .2s;
+
+    }
+
+
+    .footer-links a:hover {
+
+        color:
+            white;
+
+    }
+
+
+    /* =====================================================
+       REDES SOCIALES
+    ===================================================== */
+
+    .socials {
+
+        display:
+            flex;
+
+        gap:
+            9px;
+
+        flex-wrap:
+            wrap;
+
+    }
+
+
+    .social {
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+        border:
+            1px solid rgba(255,255,255,.15);
+
+        border-radius:
+            50%;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        font-size:
+            13px;
+
+        transition:
+            .25s;
+
+    }
+
+
+    .social:hover {
+
+        background:
+            white;
+
+        color:
+            var(--verde);
+
+    }
+
+
+    /* =====================================================
+       COPYRIGHT
+    ===================================================== */
+
+    .copyright {
+
+        max-width:
+            1250px;
+
+        margin:
+            auto;
+
+        padding-top:
+            20px;
+
+        border-top:
+            1px solid rgba(255,255,255,.1);
+
+        color:
+            rgba(255,255,255,.4);
+
+        font-size:
+            11px;
+
+    }
+
+
+    /* =====================================================
+       WHATSAPP
+    ===================================================== */
+
+    .floating-whatsapp {
+
+        position:
+            fixed;
+
+        right:
+            25px;
+
+        bottom:
+            25px;
+
+        width:
+            58px;
+
+        height:
+            58px;
+
+        border-radius:
+            50%;
+
+        background:
+            #25D366;
+
+        color:
+            white;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        z-index:
+            9999;
+
+        box-shadow:
+            0 8px 25px rgba(0,0,0,.20);
+
+        transition:
+            .25s;
+
+    }
+
+
+    .floating-whatsapp:hover {
+
+        transform:
+            translateY(-4px)
+            scale(1.05);
+
+        box-shadow:
+            0 12px 30px rgba(0,0,0,.28);
+
+    }
+
+
+    .floating-whatsapp span {
+
+        font-size:
+            29px;
+
+        line-height:
+            1;
+
+    }
+
+
+    /* =====================================================
+       VOLVER ARRIBA
+    ===================================================== */
+
+    .back-to-top {
+
+        position:
+            fixed;
+
+        right:
+            25px;
+
+        bottom:
+            95px;
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+        border:
+            none;
+
+        border-radius:
+            50%;
+
+        background:
+            var(--verde);
+
+        color:
+            white;
+
+        font-size:
+            22px;
+
+        font-weight:
+            bold;
+
+        cursor:
+            pointer;
+
+        z-index:
+            9998;
+
+        opacity:
+            0;
+
+        visibility:
+            hidden;
+
+        transform:
+            translateY(15px);
+
+        transition:
+            .3s;
+
+        box-shadow:
+            0 8px 25px rgba(0,0,0,.18);
+
+    }
+
+
+    .back-to-top.show {
+
+        opacity:
+            1;
+
+        visibility:
+            visible;
+
+        transform:
+            translateY(0);
+
+    }
+
+
+    .back-to-top:hover {
+
+        background:
+            var(--verde-oscuro);
+
+        transform:
+            translateY(-3px);
+
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width:950px) {
+
+        .menu {
+
+            display:
+                none;
+
+        }
+
+
+        .footer-grid {
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+        }
+
+    }
+
+
+    @media (max-width:600px) {
+
+        .header-container {
+
+            padding:
+                0 18px;
+
+        }
+
+
+        .article-header {
+
+            padding:
+                65px 18px 45px;
+
+        }
+
+
+        .article-section {
+
+            padding:
+                45px 18px 65px;
+
+        }
+
+
+        .article-header h1 {
+
+            font-size:
+                36px;
+
+        }
+
+
+        .article-content {
+
+            font-size:
+                16px;
+
+        }
+
+
+        .article-content h2 {
+
+            font-size:
+                27px;
+
+        }
+
+
+        .article-image {
+
+            border-radius:
+                15px;
+
+            margin-bottom:
+                35px;
+
+        }
+
+
+        .related {
+
+            padding:
+                60px 18px;
+
+        }
+
+
+        .related-grid {
+
+            grid-template-columns:
+                1fr;
+
+        }
+
+
+        .footer-grid {
+
+            grid-template-columns:
+                1fr;
+
+        }
+
+
+        .floating-whatsapp {
+
+            width:
+                53px;
+
+            height:
+                53px;
+
+            right:
+                17px;
+
+            bottom:
+                17px;
+
+        }
+
+
+        .floating-whatsapp span {
+
+            font-size:
+                26px;
+
+        }
+
+
+        .back-to-top {
+
+            width:
+                44px;
+
+            height:
+                44px;
+
+            right:
+                21px;
+
+            bottom:
+                80px;
+
+            font-size:
+                20px;
+
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+```
+<div class="header-container">
+
+    <a
+        href="index.html"
+        class="logo">
+
+        MASTER <span>AGRO</span>
+
+    </a>
+
+
+    <nav class="menu">
+
+        <a href="index.html#inicio">
+            Inicio
+        </a>
+
+        <a href="index.html#productos">
+            Productos
+        </a>
+
+        <a href="index.html#noticias">
+            Noticias
+        </a>
+
+        <a href="index.html#catalogo">
+            Catálogo
+        </a>
+
+        <a href="index.html#contacto">
+            Contacto
+        </a>
+
+        <a
+            href="https://ferozo.email/"
+            class="menu-button">
+
+            Intranet
+
+        </a>
+
+    </nav>
+
+</div>
+```
+
+</header>
+
+<!-- =====================================================
+     CONTENIDO
+===================================================== -->
+
+<main>
+
+```
+<!-- =================================================
+     CABECERA
+================================================== -->
+
+<section class="article-header">
+
+    <div class="article-header-content">
+
+        <span class="article-category">
+            Actualidad
+        </span>
+
+        <h1>
+            Taller de Difusión
+            ISO 14001:2015
+        </h1>
+
+        <p class="article-date">
+            Master Agro · 2026
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     ARTÍCULO
+================================================== -->
+
+<section class="article-section">
+
+    <article class="article-container">
+
+
+        <!-- IMAGEN PRINCIPAL -->
+
+        <div class="article-image">
+
+            <img
+                src="assets/noticias/noticia-01.jpg"
+                alt="Taller de Difusión ISO 14001:2015">
+
+        </div>
+
+
+        <!-- CONTENIDO -->
+
+        <div class="article-content">
+
+            <p>
+                En Master Agro reafirmamos nuestro compromiso
+                con una gestión responsable y orientada hacia
+                la mejora continua.
+            </p>
+
+
+            <p>
+                En ese marco, se desarrolló un
+                <strong>
+                    Taller de Difusión sobre la norma
+                    ISO 14001:2015
+                </strong>,
+                dirigido a nuestro equipo de trabajo.
+            </p>
+
+
+            <div class="article-highlight">
+
+                <p>
+                    La capacitación busca fortalecer el
+                    conocimiento y la participación de nuestros
+                    colaboradores en materia de gestión ambiental.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Compromiso con la gestión ambiental
+            </h2>
+
+
+            <p>
+                La norma ISO 14001:2015 establece los criterios
+                para implementar y mantener un sistema de gestión
+                ambiental eficaz, permitiendo a las organizaciones
+                gestionar sus responsabilidades ambientales de
+                manera sistemática.
+            </p>
+
+
+            <p>
+                Para Master Agro, conocer estos principios permite
+                fortalecer nuestras prácticas y promover una cultura
+                organizacional enfocada en la prevención, el
+                cumplimiento y la mejora continua.
+            </p>
+
+
+            <h2>
+                Una actividad orientada a la mejora continua
+            </h2>
+
+
+            <p>
+                Durante el taller se compartieron conceptos y
+                aspectos relacionados con la norma ISO 14001:2015,
+                buscando generar una mayor comprensión sobre la
+                importancia de la gestión ambiental dentro de las
+                actividades de la organización.
+            </p>
+
+
+            <p>
+                La participación de nuestro equipo representa un
+                paso importante para continuar fortaleciendo una
+                cultura de responsabilidad y compromiso con el
+                cuidado del medio ambiente.
+            </p>
+
+
+            <h2>
+                Seguimos avanzando
+            </h2>
+
+
+            <p>
+                En Master Agro continuamos trabajando para mejorar
+                nuestros procesos y fortalecer nuestras prácticas,
+                buscando generar valor para nuestros clientes,
+                colaboradores y entorno.
+            </p>
+
+
+            <div class="article-divider"></div>
+
+
+            <a
+                href="index.html#noticias"
+                class="back-news">
+
+                ← Volver a noticias
+
+            </a>
+
+        </div>
+
+    </article>
+
+</section>
+
+
+<!-- =================================================
+     NOTICIAS RELACIONADAS
+================================================== -->
+
+<section class="related">
+
+    <div class="related-container">
+
+
+        <div class="related-title">
+
+            <small>
+                Actualidad
+            </small>
+
+            <h2>
+                También te puede interesar
+            </h2>
+
+        </div>
+
+
+        <div class="related-grid">
+
+
+            <!-- NOTICIA 2 -->
+
+            <a
+                href="noticia-iso-14001.html"
+                class="related-card">
+
+                <div class="related-image">
+
+                    <img
+                        src="assets/noticias/noticia-02.jpg"
+                        alt="ISO 14001:2015">
+
+                </div>
+
+                <div class="related-content">
+
+                    <span>
+                        2026
+                    </span>
+
+                    <h3>
+                        ISO 14001:2015
+                    </h3>
+
+                    <span class="related-link">
+                        Leer noticia →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- NOTICIA 3 -->
+
+            <a
+                href="index.html#noticias"
+                class="related-card">
+
+                <div class="related-image">
+
+                    <img
+                        src="assets/noticias/noticia-03.jpg"
+                        alt="Novedades Master Agro">
+
+                </div>
+
+                <div class="related-content">
+
+                    <span>
+                        Noticias
+                    </span>
+
+                    <h3>
+                        Novedades Master Agro
+                    </h3>
+
+                    <span class="related-link">
+                        Ver noticias →
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+```
+
+</main>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer id="contacto">
+
+```
+<div class="footer-grid">
+
+
+    <!-- EMPRESA -->
+
+    <div class="footer-column">
+
+        <div class="footer-logo">
+            MASTER AGRO
+        </div>
+
+        <p>
+            Soluciones agrícolas para acompañar
+            el desarrollo y las necesidades del
+            sector agropecuario.
+        </p>
+
+    </div>
+
+
+    <!-- CONTACTO -->
+
+    <div class="footer-column">
+
+        <h4>
+            Contacto
+        </h4>
+
+        <div class="footer-links">
+
+            <p>
+                📍 Jr. Jose Manuel Iturregui A Nro. 119
+                Urb. Cercado - Surquillo - Lima
+            </p>
+
+            <p>
+                ☎ Teléfono
+            </p>
+
+            <p>
+                ✉ central.ventas@masteragro.mx
+            </p>
+
+            <p>
+                💬 +51 962 746 435
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ENLACES -->
+
+    <div class="footer-column">
+
+        <h4>
+            Enlaces
+        </h4>
+
+        <div class="footer-links">
+
+            <a href="index.html#inicio">
+                Inicio
+            </a>
+
+            <a href="index.html#productos">
+                Productos
+            </a>
+
+            <a href="index.html#noticias">
+                Noticias
+            </a>
+
+            <a href="index.html#catalogo">
+                Catálogo
+            </a>
+
+            <a href="index.html#contacto">
+                Contacto
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- REDES -->
+
+    <div class="footer-column">
+
+        <h4>
+            Síguenos
+        </h4>
+
+        <p style="margin-bottom:15px;">
+            Encontranos en nuestras redes sociales.
+        </p>
+
+
+        <div class="socials">
+
+            <a
+                href="#"
+                class="social"
+                aria-label="Facebook">
+
+                f
+
+            </a>
+
+
+            <a
+                href="#"
+                class="social"
+                aria-label="Instagram">
+
+                ig
+
+            </a>
+
+
+            <a
+                href="#"
+                class="social"
+                aria-label="LinkedIn">
+
+                in
+
+            </a>
+
+
+            <a
+                href="#"
+                class="social"
+                aria-label="TikTok">
+
+                tk
+
+            </a>
+
+
+            <a
+                href="https://wa.me/51970859150"
+                class="social"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp">
+
+                wa
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="copyright">
+
+    © 2026 Master Agro Business S.A.C.
+    Todos los derechos reservados.
+
+</div>
+```
+
+</footer>
+
+<!-- =====================================================
+     WHATSAPP FLOTANTE
+===================================================== -->
+
+<a
+ href="https://wa.me/51970859150"
+ class="floating-whatsapp"
+ target="_blank"
+ rel="noopener noreferrer"
+ aria-label="Contactar por WhatsApp">
+
+```
+<span>
+    ☏
+</span>
+```
+
+</a>
+
+<!-- =====================================================
+     VOLVER ARRIBA
+===================================================== -->
+
+<button
+ id="backToTop"
+ class="back-to-top"
+ aria-label="Volver arriba">
+
+```
+↑
+```
+
+</button>
+
+<script>
+
+    /* =====================================================
+       VOLVER ARRIBA
+    ===================================================== */
+
+    const backToTop =
+        document.getElementById(
+            "backToTop"
+        );
+
+
+    window.addEventListener(
+        "scroll",
+        function () {
+
+            if (
+                window.scrollY > 400
+            ) {
+
+                backToTop.classList.add(
+                    "show"
+                );
+
+            } else {
+
+                backToTop.classList.remove(
+                    "show"
+                );
+
+            }
+
+        }
+    );
+
+
+    backToTop.addEventListener(
+        "click",
+        function () {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
