@@ -1,1 +1,3151 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Productos | Master Agro</title>
+
+<meta
+    name="description"
+    content="Conoce nuestro portafolio de productos Master Agro y nuestras diferentes líneas de soluciones agrícolas."
+>
+
+<style>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --verde: #176b3a;
+    --verde-oscuro: #0d4526;
+    --negro: #151b17;
+    --gris: #68716b;
+    --gris-claro: #f5f7f5;
+    --blanco: #ffffff;
+
+    --black-life: #654222;
+    --express: #434ebc;
+    --inmunobio: #00a650;
+    --elicitores: #ec008c;
+    --aminosate: #fe0000;
+    --premium: #fff200;
+    --foltec: #fe9300;
+    --etacel: #0aa6c9;
+
+    --sombra:
+        0 12px 35px rgba(0,0,0,.08);
+
+    --radio: 18px;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color:
+        var(--negro);
+
+    background:
+        var(--blanco);
+
+    line-height:
+        1.6;
+
+}
+
+
+img {
+
+    width: 100%;
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(255,255,255,.96);
+
+    backdrop-filter:
+        blur(10px);
+
+    border-bottom:
+        1px solid #e8ece9;
+
+}
+
+
+.header-container {
+
+    max-width: 1250px;
+
+    height: 78px;
+
+    margin: auto;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    color:
+        var(--verde);
+
+    letter-spacing:
+        -1px;
+
+}
+
+
+.logo span {
+
+    color:
+        var(--negro);
+
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.menu a {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color:
+        #39443d;
+
+    transition:
+        .25s;
+
+}
+
+
+.menu a:hover {
+
+    color:
+        var(--verde);
+
+}
+
+
+.menu-button {
+
+    background:
+        var(--verde);
+
+    color:
+        white !important;
+
+    padding:
+        11px 20px;
+
+    border-radius:
+        30px;
+
+}
+
+
+.menu-button:hover {
+
+    background:
+        var(--verde-oscuro);
+
+}
+
+
+/* =====================================================
+   CONTENIDO
+===================================================== */
+
+main {
+
+    padding-top:
+        78px;
+
+}
+
+
+/* =====================================================
+   HERO PRODUCTOS
+===================================================== */
+
+.products-hero {
+
+    background:
+        var(--gris-claro);
+
+    padding:
+        90px 25px 75px;
+
+    text-align:
+        center;
+
+}
+
+
+.products-hero-container {
+
+    max-width:
+        900px;
+
+    margin:
+        auto;
+
+}
+
+
+.products-label {
+
+    display:
+        inline-block;
+
+    color:
+        var(--verde);
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1.8px;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.products-hero h1 {
+
+    font-size:
+        clamp(38px,5vw,60px);
+
+    line-height:
+        1.05;
+
+    letter-spacing:
+        -2px;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.products-hero p {
+
+    max-width:
+        700px;
+
+    margin:
+        auto;
+
+    color:
+        var(--gris);
+
+    font-size:
+        17px;
+
+}
+
+
+/* =====================================================
+   FILTROS
+===================================================== */
+
+.products-section {
+
+    padding:
+        65px 25px 90px;
+
+}
+
+
+.products-container {
+
+    max-width:
+        1250px;
+
+    margin:
+        auto;
+
+}
+
+
+.filters {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+    margin-bottom:
+        55px;
+
+}
+
+
+.filter-button {
+
+    border:
+        1px solid #dce2de;
+
+    background:
+        white;
+
+    color:
+        #39443d;
+
+    padding:
+        11px 17px;
+
+    border-radius:
+        30px;
+
+    cursor:
+        pointer;
+
+    font-family:
+        inherit;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    transition:
+        .25s;
+
+}
+
+
+.filter-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        var(--verde);
+
+    color:
+        var(--verde);
+
+}
+
+
+.filter-button.active {
+
+    background:
+        var(--verde);
+
+    border-color:
+        var(--verde);
+
+    color:
+        white;
+
+}
+
+
+/* =====================================================
+   GRUPOS DE PRODUCTOS
+===================================================== */
+
+.product-line {
+
+    margin-bottom:
+        70px;
+
+}
+
+
+.product-line.hidden {
+
+    display:
+        none;
+
+}
+
+
+.line-header {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.line-color {
+
+    width:
+        12px;
+
+    height:
+        42px;
+
+    border-radius:
+        8px;
+
+    flex-shrink:
+        0;
+
+}
+
+
+.line-title {
+
+    font-size:
+        27px;
+
+    line-height:
+        1.1;
+
+}
+
+
+.line-count {
+
+    margin-left:
+        auto;
+
+    color:
+        var(--gris);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.products-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:
+        20px;
+
+}
+
+
+/* =====================================================
+   TARJETA
+===================================================== */
+
+.product-card {
+
+    background:
+        white;
+
+    border:
+        1px solid #e5e9e6;
+
+    border-radius:
+        var(--radio);
+
+    overflow:
+        hidden;
+
+    transition:
+        .3s;
+
+}
+
+
+.product-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--sombra);
+
+}
+
+
+.product-image {
+
+    height:
+        280px;
+
+    background:
+        #f3f5f3;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    overflow:
+        hidden;
+
+}
+
+
+.product-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        contain;
+
+    padding:
+        18px;
+
+    transition:
+        .35s;
+
+}
+
+
+.product-card:hover
+.product-image img {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+/* =====================================================
+   PLACEHOLDER
+===================================================== */
+
+.product-placeholder {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    color:
+        #9aa39d;
+
+    text-align:
+        center;
+
+    padding:
+        20px;
+
+}
+
+
+.product-placeholder-icon {
+
+    font-size:
+        42px;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.product-placeholder small {
+
+    font-size:
+        11px;
+
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.product-info {
+
+    padding:
+        20px;
+
+}
+
+
+.product-line-name {
+
+    font-size:
+        10px;
+
+    font-weight:
+        900;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1px;
+
+    margin-bottom:
+        7px;
+
+}
+
+
+.product-name {
+
+    font-size:
+        19px;
+
+    line-height:
+        1.2;
+
+    min-height:
+        46px;
+
+    margin-bottom:
+        17px;
+
+}
+
+
+.product-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        100%;
+
+    padding:
+        11px 15px;
+
+    border-radius:
+        30px;
+
+    color:
+        white;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    transition:
+        .25s;
+
+}
+
+
+.product-button:hover {
+
+    filter:
+        brightness(.88);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =====================================================
+   COLORES DE LÍNEAS
+===================================================== */
+
+.black-life .line-color,
+.black-life .product-button {
+
+    background:
+        var(--black-life);
+
+}
+
+
+.express .line-color,
+.express .product-button {
+
+    background:
+        var(--express);
+
+}
+
+
+.inmunobio .line-color,
+.inmunobio .product-button {
+
+    background:
+        var(--inmunobio);
+
+}
+
+
+.elicitores .line-color,
+.elicitores .product-button {
+
+    background:
+        var(--elicitores);
+
+}
+
+
+.aminosate .line-color,
+.aminosate .product-button {
+
+    background:
+        var(--aminosate);
+
+}
+
+
+.premium .line-color,
+.premium .product-button {
+
+    background:
+        var(--premium);
+
+}
+
+
+.foltec .line-color,
+.foltec .product-button {
+
+    background:
+        var(--foltec);
+
+}
+
+
+.etacel .line-color,
+.etacel .product-button {
+
+    background:
+        var(--etacel);
+
+}
+
+
+.black-life .product-line-name {
+
+    color:
+        var(--black-life);
+
+}
+
+
+.express .product-line-name {
+
+    color:
+        var(--express);
+
+}
+
+
+.inmunobio .product-line-name {
+
+    color:
+        var(--inmunobio);
+
+}
+
+
+.elicitores .product-line-name {
+
+    color:
+        var(--elicitores);
+
+}
+
+
+.aminosate .product-line-name {
+
+    color:
+        var(--aminosate);
+
+}
+
+
+.premium .product-line-name {
+
+    color:
+        #c5aa00;
+
+}
+
+
+.foltec .product-line-name {
+
+    color:
+        var(--foltec);
+
+}
+
+
+.etacel .product-line-name {
+
+    color:
+        var(--etacel);
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background:
+        #0a2415;
+
+    color:
+        white;
+
+    padding:
+        65px 25px 25px;
+
+}
+
+
+.footer-grid {
+
+    max-width:
+        1250px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr 1fr;
+
+    gap:
+        45px;
+
+    padding-bottom:
+        45px;
+
+}
+
+
+.footer-logo {
+
+    font-size:
+        25px;
+
+    font-weight:
+        900;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.footer-column h4 {
+
+    margin-bottom:
+        17px;
+
+    font-size:
+        15px;
+
+}
+
+
+.footer-column p {
+
+    color:
+        rgba(255,255,255,.6);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+
+}
+
+
+.footer-links {
+
+    display:
+        grid;
+
+    gap:
+        9px;
+
+}
+
+
+.footer-links a {
+
+    color:
+        rgba(255,255,255,.6);
+
+    font-size:
+        13px;
+
+    transition:
+        .2s;
+
+}
+
+
+.footer-links a:hover {
+
+    color:
+        white;
+
+}
+
+
+/* =====================================================
+   REDES
+===================================================== */
+
+.socials {
+
+    display:
+        flex;
+
+    gap:
+        9px;
+
+    flex-wrap:
+        wrap;
+
+}
+
+
+.social {
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    border-radius:
+        50%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-size:
+        13px;
+
+    transition:
+        .25s;
+
+}
+
+
+.social:hover {
+
+    background:
+        white;
+
+    color:
+        var(--verde);
+
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.copyright {
+
+    max-width:
+        1250px;
+
+    margin:
+        auto;
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid rgba(255,255,255,.1);
+
+    color:
+        rgba(255,255,255,.4);
+
+    font-size:
+        11px;
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.floating-whatsapp {
+
+    position:
+        fixed;
+
+    right:
+        25px;
+
+    bottom:
+        25px;
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    border-radius:
+        50%;
+
+    background:
+        #25D366;
+
+    color:
+        white;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    z-index:
+        9999;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.20);
+
+    transition:
+        .25s;
+
+}
+
+
+.floating-whatsapp:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.05);
+
+}
+
+
+.floating-whatsapp span {
+
+    font-size:
+        29px;
+
+}
+
+
+/* =====================================================
+   VOLVER ARRIBA
+===================================================== */
+
+.back-to-top {
+
+    position:
+        fixed;
+
+    right:
+        25px;
+
+    bottom:
+        95px;
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    border:
+        none;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--verde);
+
+    color:
+        white;
+
+    font-size:
+        22px;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+
+    z-index:
+        9998;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        translateY(15px);
+
+    transition:
+        .3s;
+
+}
+
+
+.back-to-top.show {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width:1100px) {
+
+    .products-grid {
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+    }
+
+}
+
+
+@media (max-width:950px) {
+
+    .menu {
+
+        display:
+            none;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+@media (max-width:700px) {
+
+    .products-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .line-header {
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .line-count {
+
+        display:
+            none;
+
+    }
+
+}
+
+
+@media (max-width:600px) {
+
+    .header-container {
+
+        padding:
+            0 18px;
+
+    }
+
+
+    .products-hero {
+
+        padding:
+            65px 18px 50px;
+
+    }
+
+
+    .products-section {
+
+        padding:
+            45px 18px 65px;
+
+    }
+
+
+    .products-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .product-image {
+
+        height:
+            300px;
+
+    }
+
+
+    .filters {
+
+        justify-content:
+            flex-start;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .floating-whatsapp {
+
+        width:
+            53px;
+
+        height:
+            53px;
+
+        right:
+            17px;
+
+        bottom:
+            17px;
+
+    }
+
+
+    .back-to-top {
+
+        right:
+            21px;
+
+        bottom:
+            80px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="header-container">
+
+    <a
+        href="index.html"
+        class="logo">
+
+        MASTER <span>AGRO</span>
+
+    </a>
+
+
+    <nav class="menu">
+
+        <a href="index.html#inicio">
+            Inicio
+        </a>
+
+        <a href="productos.html">
+            Productos
+        </a>
+
+        <a href="index.html#noticias">
+            Noticias
+        </a>
+
+        <a href="index.html#catalogo">
+            Catálogo
+        </a>
+
+        <a href="index.html#contacto">
+            Contacto
+        </a>
+
+        <a
+            href="https://ferozo.email/"
+            class="menu-button">
+
+            Intranet
+
+        </a>
+
+    </nav>
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="products-hero">
+
+<div class="products-hero-container">
+
+    <span class="products-label">
+        Nuestro portafolio
+    </span>
+
+    <h1>
+        Productos Master Agro
+    </h1>
+
+    <p>
+        Soluciones especializadas para el desarrollo,
+        protección y nutrición de los cultivos,
+        agrupadas en nuestras diferentes líneas.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUCTOS
+===================================================== -->
+
+<section class="products-section">
+
+<div class="products-container">
+
+
+<!-- =====================================================
+     FILTROS
+===================================================== -->
+
+<div class="filters">
+
+    <button
+        class="filter-button active"
+        data-filter="todos">
+
+        Todos
+
+    </button>
+
+
+    <button
+        class="filter-button"
+        data-filter="express">
+
+        Express
+
+    </button>
+
+
+    <button
+        class="filter-button"
+        data-filter="inmunobio">
+
+        Inmunobioinductor
+
+    </button>
+
+
+    <button
+        class="filter-button"
+        data-filter="elicitores">
+
+        Elicitores
+
+    </button>
+
+
+    <button
+        class="filter-button"
+        data-filter="aminosate">
+
+        Aminosate
+
+    </button>
+
+
+    <button
+        class="filter-button"
+        data-filter="premium">
+
+        Premium
+
+    </button>
+
+
+    <button
+        class="filter-button"
+        data-filter="foltec">
+
+        Foltec
+
+    </button>
+
+
+    <button
+        class="filter-button"
+        data-filter="etacel">
+
+        Etacel
+
+    </button>
+
+
+    <button
+        class="filter-button"
+        data-filter="black-life">
+
+        Black Life
+
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+     EXPRESS
+===================================================== -->
+
+<section
+    class="product-line express"
+    data-line="express">
+
+<div class="line-header">
+
+    <div class="line-color"></div>
+
+    <h2 class="line-title">
+        Línea Express
+    </h2>
+
+    <span class="line-count">
+        11 productos
+    </span>
+
+</div>
+
+
+<div class="products-grid">
+
+
+<!-- PRODUCTO -->
+
+<a
+    href="producto-algas-express.html"
+    class="product-card">
+
+    <div class="product-image">
+
+        <img
+            src="assets/productos/algas-express.png"
+            alt="Algas Express"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+        <div
+            class="product-placeholder"
+            style="display:none;">
+
+            <div class="product-placeholder-icon">
+                🌱
+            </div>
+
+            <small>
+                Imagen del producto
+            </small>
+
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <div class="product-line-name">
+            Express
+        </div>
+
+        <h3 class="product-name">
+            Algas Express
+        </h3>
+
+        <span class="product-button">
+            Ver producto →
+        </span>
+
+    </div>
+
+</a>
+
+
+<a
+    href="producto-auxiprom.html"
+    class="product-card">
+
+    <div class="product-image">
+
+        <img
+            src="assets/productos/auxiprom.png"
+            alt="Auxiprom"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+        <div class="product-placeholder" style="display:none;">
+            <div class="product-placeholder-icon">🌱</div>
+            <small>Imagen del producto</small>
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <div class="product-line-name">Express</div>
+
+        <h3 class="product-name">Auxiprom</h3>
+
+        <span class="product-button">
+            Ver producto →
+        </span>
+
+    </div>
+
+</a>
+
+
+<a
+    href="producto-stimphyll.html"
+    class="product-card">
+
+    <div class="product-image">
+
+        <img
+            src="assets/productos/stimphyll.png"
+            alt="Stimphyll"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+        <div class="product-placeholder" style="display:none;">
+            <div class="product-placeholder-icon">🌱</div>
+            <small>Imagen del producto</small>
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <div class="product-line-name">Express</div>
+
+        <h3 class="product-name">Stimphyll</h3>
+
+        <span class="product-button">Ver producto →</span>
+
+    </div>
+
+</a>
+
+
+<a
+    href="producto-produce.html"
+    class="product-card">
+
+    <div class="product-image">
+
+        <img
+            src="assets/productos/produce.png"
+            alt="Produce"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+        <div class="product-placeholder" style="display:none;">
+            <div class="product-placeholder-icon">🌱</div>
+            <small>Imagen del producto</small>
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <div class="product-line-name">Express</div>
+
+        <h3 class="product-name">Produce</h3>
+
+        <span class="product-button">Ver producto →</span>
+
+    </div>
+
+</a>
+
+
+<a
+    href="producto-lotuss.html"
+    class="product-card">
+
+    <div class="product-image">
+
+        <img
+            src="assets/productos/lotuss.png"
+            alt="Lotuss"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+        <div class="product-placeholder" style="display:none;">
+            <div class="product-placeholder-icon">🌱</div>
+            <small>Imagen del producto</small>
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <div class="product-line-name">Express</div>
+
+        <h3 class="product-name">Lotuss</h3>
+
+        <span class="product-button">Ver producto →</span>
+
+    </div>
+
+</a>
+
+
+<a
+    href="producto-enzimes.html"
+    class="product-card">
+
+    <div class="product-image">
+
+        <img
+            src="assets/productos/enzimes.png"
+            alt="Enzimes"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+        <div class="product-placeholder" style="display:none;">
+            <div class="product-placeholder-icon">🌱</div>
+            <small>Imagen del producto</small>
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <div class="product-line-name">Express</div>
+
+        <h3 class="product-name">Enzimes</h3>
+
+        <span class="product-button">Ver producto →</span>
+
+    </div>
+
+</a>
+
+
+<a
+    href="producto-probion.html"
+    class="product-card">
+
+    <div class="product-image">
+
+        <img
+            src="assets/productos/probion.png"
+            alt="Probion"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+        <div class="product-placeholder" style="display:none;">
+            <div class="product-placeholder-icon">🌱</div>
+            <small>Imagen del producto</small>
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <div class="product-line-name">Express</div>
+
+        <h3 class="product-name">Probion</h3>
+
+        <span class="product-button">Ver producto →</span>
+
+    </div>
+
+</a>
+
+
+<a
+    href="producto-adn-probioticos.html"
+    class="product-card">
+
+    <div class="product-image">
+
+        <img
+            src="assets/productos/adn-probioticos.png"
+            alt="ADN Probióticos"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+        <div class="product-placeholder" style="display:none;">
+            <div class="product-placeholder-icon">🌱</div>
+            <small>Imagen del producto</small>
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <div class="product-line-name">Express</div>
+
+        <h3 class="product-name">ADN Probióticos</h3>
+
+        <span class="product-button">Ver producto →</span>
+
+    </div>
+
+</a>
+
+
+<a
+    href="producto-symbiosis.html"
+    class="product-card">
+
+    <div class="product-image">
+
+        <img
+            src="assets/productos/symbiosis.png"
+            alt="Symbiosis"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+        <div class="product-placeholder" style="display:none;">
+            <div class="product-placeholder-icon">🌱</div>
+            <small>Imagen del producto</small>
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <div class="product-line-name">Express</div>
+
+        <h3 class="product-name">Symbiosis</h3>
+
+        <span class="product-button">Ver producto →</span>
+
+    </div>
+
+</a>
+
+
+<a
+    href="producto-rizoma.html"
+    class="product-card">
+
+    <div class="product-image">
+
+        <img
+            src="assets/productos/rizoma.png"
+            alt="Rizoma"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+        <div class="product-placeholder" style="display:none;">
+            <div class="product-placeholder-icon">🌱</div>
+            <small>Imagen del producto</small>
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <div class="product-line-name">Express</div>
+
+        <h3 class="product-name">Rizoma</h3>
+
+        <span class="product-button">Ver producto →</span>
+
+    </div>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     INMUNOBIOINDUCTOR
+===================================================== -->
+
+<section
+    class="product-line inmunobio"
+    data-line="inmunobio">
+
+<div class="line-header">
+
+    <div class="line-color"></div>
+
+    <h2 class="line-title">
+        Línea Inmunobioinductor
+    </h2>
+
+    <span class="line-count">
+        8 productos
+    </span>
+
+</div>
+
+
+<div class="products-grid">
+
+<!-- SICARIO -->
+
+<a href="producto-sicario.html" class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/productos/sicario.png"
+alt="Sicario"
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="product-placeholder" style="display:none;">
+<div class="product-placeholder-icon">🌱</div>
+<small>Imagen del producto</small>
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-line-name">
+Inmunobioinductor
+</div>
+
+<h3 class="product-name">
+Sicario
+</h3>
+
+<span class="product-button">
+Ver producto →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- ORBIX -->
+
+<a href="producto-orbix.html" class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/productos/orbix.png"
+alt="Orbix"
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="product-placeholder" style="display:none;">
+<div class="product-placeholder-icon">🌱</div>
+<small>Imagen del producto</small>
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-line-name">
+Inmunobioinductor
+</div>
+
+<h3 class="product-name">
+Orbix
+</h3>
+
+<span class="product-button">
+Ver producto →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- VENONAT -->
+
+<a href="producto-venonat.html" class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/productos/venonat.png"
+alt="Venonat"
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="product-placeholder" style="display:none;">
+<div class="product-placeholder-icon">🌱</div>
+<small>Imagen del producto</small>
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-line-name">
+Inmunobioinductor
+</div>
+
+<h3 class="product-name">
+Venonat
+</h3>
+
+<span class="product-button">
+Ver producto →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- NODUX -->
+
+<a href="producto-nodux.html" class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/productos/nodux.png"
+alt="Nodux"
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="product-placeholder" style="display:none;">
+<div class="product-placeholder-icon">🌱</div>
+<small>Imagen del producto</small>
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-line-name">
+Inmunobioinductor
+</div>
+
+<h3 class="product-name">
+Nodux
+</h3>
+
+<span class="product-button">
+Ver producto →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- SALICINA -->
+
+<a href="producto-salicina.html" class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/productos/salicina.png"
+alt="Salicina"
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="product-placeholder" style="display:none;">
+<div class="product-placeholder-icon">🌱</div>
+<small>Imagen del producto</small>
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-line-name">
+Inmunobioinductor
+</div>
+
+<h3 class="product-name">
+Salicina
+</h3>
+
+<span class="product-button">
+Ver producto →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- EMPIRE -->
+
+<a href="producto-empire.html" class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/productos/empire.png"
+alt="Empire"
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="product-placeholder" style="display:none;">
+<div class="product-placeholder-icon">🌱</div>
+<small>Imagen del producto</small>
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-line-name">
+Inmunobioinductor
+</div>
+
+<h3 class="product-name">
+Empire
+</h3>
+
+<span class="product-button">
+Ver producto →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- VITAL GREEN -->
+
+<a href="producto-vital-green.html" class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/productos/vital-green.png"
+alt="Vital Green"
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="product-placeholder" style="display:none;">
+<div class="product-placeholder-icon">🌱</div>
+<small>Imagen del producto</small>
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-line-name">
+Inmunobioinductor
+</div>
+
+<h3 class="product-name">
+Vital Green
+</h3>
+
+<span class="product-button">
+Ver producto →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- VITAL EQUIS -->
+
+<a href="producto-vital-equis.html" class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/productos/vital-equis.png"
+alt="Vital Equis"
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="product-placeholder" style="display:none;">
+<div class="product-placeholder-icon">🌱</div>
+<small>Imagen del producto</small>
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-line-name">
+Inmunobioinductor
+</div>
+
+<h3 class="product-name">
+Vital Equis
+</h3>
+
+<span class="product-button">
+Ver producto →
+</span>
+
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ELICITORES
+===================================================== -->
+
+<section class="product-line elicitores" data-line="elicitores">
+
+<div class="line-header">
+
+<div class="line-color"></div>
+
+<h2 class="line-title">
+Línea Elicitores
+</h2>
+
+<span class="line-count">
+6 productos
+</span>
+
+</div>
+
+<div class="products-grid">
+
+<a href="producto-active.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/active.png" alt="Active">
+</div>
+<div class="product-info">
+<div class="product-line-name">Elicitores</div>
+<h3 class="product-name">Active</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-phycal.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/phycal.png" alt="Phycal">
+</div>
+<div class="product-info">
+<div class="product-line-name">Elicitores</div>
+<h3 class="product-name">Phycal</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-phylex.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/phylex.png" alt="Phylex">
+</div>
+<div class="product-info">
+<div class="product-line-name">Elicitores</div>
+<h3 class="product-name">Phylex</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-phymag.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/phymag.png" alt="Phymag">
+</div>
+<div class="product-info">
+<div class="product-line-name">Elicitores</div>
+<h3 class="product-name">Phymag</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-phylex-mn.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/phylex-mn.png" alt="Phylex MN">
+</div>
+<div class="product-info">
+<div class="product-line-name">Elicitores</div>
+<h3 class="product-name">Phylex MN</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-phylex-mix.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/phylex-mix.png" alt="Phylex Mix">
+</div>
+<div class="product-info">
+<div class="product-line-name">Elicitores</div>
+<h3 class="product-name">Phylex Mix</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+</div>
+</section>
+
+
+<!-- =====================================================
+     AMINOSATE
+===================================================== -->
+
+<section class="product-line aminosate" data-line="aminosate">
+
+<div class="line-header">
+
+<div class="line-color"></div>
+
+<h2 class="line-title">
+Línea Aminosate
+</h2>
+
+<span class="line-count">
+8 productos
+</span>
+
+</div>
+
+<div class="products-grid">
+
+<a href="producto-aminosate-ca.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/aminosate-ca.png" alt="Aminosate Ca">
+</div>
+<div class="product-info">
+<div class="product-line-name">Aminosate</div>
+<h3 class="product-name">Aminosate Ca</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-aminosate-b-mo.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/aminosate-b-mo.png" alt="Aminosate B-Mo">
+</div>
+<div class="product-info">
+<div class="product-line-name">Aminosate</div>
+<h3 class="product-name">Aminosate B-Mo</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-aminosate-polen.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/aminosate-polen.png" alt="Aminosate Polen">
+</div>
+<div class="product-info">
+<div class="product-line-name">Aminosate</div>
+<h3 class="product-name">Aminosate Polen</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-aminosate-fe.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/aminosate-fe.png" alt="Aminosate Fe">
+</div>
+<div class="product-info">
+<div class="product-line-name">Aminosate</div>
+<h3 class="product-name">Aminosate Fe</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-aminosate-zn.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/aminosate-zn.png" alt="Aminosate Zn">
+</div>
+<div class="product-info">
+<div class="product-line-name">Aminosate</div>
+<h3 class="product-name">Aminosate Zn</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-aminosate-mn.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/aminosate-mn.png" alt="Aminosate Mn">
+</div>
+<div class="product-info">
+<div class="product-line-name">Aminosate</div>
+<h3 class="product-name">Aminosate Mn</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-aminosate-mg.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/aminosate-mg.png" alt="Aminosate Mg">
+</div>
+<div class="product-info">
+<div class="product-line-name">Aminosate</div>
+<h3 class="product-name">Aminosate Mg</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-aminosate-combi.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/aminosate-combi.png" alt="Aminosate Combi">
+</div>
+<div class="product-info">
+<div class="product-line-name">Aminosate</div>
+<h3 class="product-name">Aminosate Combi</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+</div>
+</section>
+
+
+<!-- =====================================================
+     PREMIUM
+===================================================== -->
+
+<section class="product-line premium" data-line="premium">
+
+<div class="line-header">
+
+<div class="line-color"></div>
+
+<h2 class="line-title">
+Línea Premium
+</h2>
+
+<span class="line-count">
+1 producto
+</span>
+
+</div>
+
+<div class="products-grid">
+
+<a href="producto-bio-control.html" class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/productos/bio-control.png"
+alt="Bio Control">
+
+</div>
+
+<div class="product-info">
+
+<div class="product-line-name">
+Premium
+</div>
+
+<h3 class="product-name">
+Bio Control
+</h3>
+
+<span class="product-button">
+Ver producto →
+</span>
+
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOLTEC
+===================================================== -->
+
+<section class="product-line foltec" data-line="foltec">
+
+<div class="line-header">
+
+<div class="line-color"></div>
+
+<h2 class="line-title">
+Línea Foltec
+</h2>
+
+<span class="line-count">
+7 productos
+</span>
+
+</div>
+
+<div class="products-grid">
+
+<a href="producto-foltec-phos-450.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/foltec-phos-450.png" alt="Foltec Phos 450">
+</div>
+<div class="product-info">
+<div class="product-line-name">Foltec</div>
+<h3 class="product-name">Foltec Phos 450</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-madura-66.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/madura-66.png" alt="Madura 66">
+</div>
+<div class="product-info">
+<div class="product-line-name">Foltec</div>
+<h3 class="product-name">Madura 66</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-k-rajo-300.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/k-rajo-300.png" alt="K-Rajo 300">
+</div>
+<div class="product-info">
+<div class="product-line-name">Foltec</div>
+<h3 class="product-name">K-Rajo 300</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-foltec-nitro-550.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/foltec-nitro-550.png" alt="Foltec Nitro 550">
+</div>
+<div class="product-info">
+<div class="product-line-name">Foltec</div>
+<h3 class="product-name">Foltec Nitro 550</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-foltec-foliar-250.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/foltec-foliar-250.png" alt="Foltec Foliar 250">
+</div>
+<div class="product-info">
+<div class="product-line-name">Foltec</div>
+<h3 class="product-name">Foltec Foliar 250</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+<a href="producto-foltec-foliar-600.html" class="product-card">
+<div class="product-image">
+<img src="assets/productos/foltec-foliar-600.png" alt="Foltec Foliar 600">
+</div>
+<div class="product-info">
+<div class="product-line-name">Foltec</div>
+<h3 class="product-name">Foltec Foliar 600</h3>
+<span class="product-button">Ver producto →</span>
+</div>
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ETACEL
+===================================================== -->
+
+<section class="product-line etacel" data-line="etacel">
+
+<div class="line-header">
+
+<div class="line-color"></div>
+
+<h2 class="line-title">
+Línea Etacel
+</h2>
+
+<span class="line-count">
+2 productos
+</span>
+
+</div>
+
+<div class="products-grid">
+
+<a href="producto-star-wett.html" class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/productos/star-wett.png"
+alt="Star Wett">
+
+</div>
+
+<div class="product-info">
+
+<div class="product-line-name">
+Etacel
+</div>
+
+<h3 class="product-name">
+Star Wett
+</h3>
+
+<span class="product-button">
+Ver producto →
+</span>
+
+</div>
+
+</a>
+
+
+<a href="producto-ph-balance.html" class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/productos/ph-balance.png"
+alt="pH Balance">
+
+</div>
+
+<div class="product-info">
+
+<div class="product-line-name">
+Etacel
+</div>
+
+<h3 class="product-name">
+pH Balance
+</h3>
+
+<span class="product-button">
+Ver producto →
+</span>
+
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     BLACK LIFE
+===================================================== -->
+
+<section class="product-line black-life" data-line="black-life">
+
+<div class="line-header">
+
+<div class="line-color"></div>
+
+<h2 class="line-title">
+Black Life
+</h2>
+
+<span class="line-count">
+2 productos
+</span>
+
+</div>
+
+<div class="products-grid">
+
+<a href="producto-root-humics-20.html" class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/productos/root-humics-20.png"
+alt="Root Humics 20">
+
+</div>
+
+<div class="product-info">
+
+<div class="product-line-name">
+Black Life
+</div>
+
+<h3 class="product-name">
+Root Humics 20
+</h3>
+
+<span class="product-button">
+Ver producto →
+</span>
+
+</div>
+
+</a>
+
+
+<a href="producto-tarpur.html" class="product-card">
+
+<div class="product-image">
+
+<img
+src="assets/productos/tarpur.png"
+alt="Tarpur">
+
+</div>
+
+<div class="product-info">
+
+<div class="product-line-name">
+Black Life
+</div>
+
+<h3 class="product-name">
+Tarpur
+</h3>
+
+<span class="product-button">
+Ver producto →
+</span>
+
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer id="contacto">
+
+<div class="footer-grid">
+
+
+<div class="footer-column">
+
+<div class="footer-logo">
+MASTER AGRO
+</div>
+
+<p>
+Soluciones agrícolas para acompañar
+el desarrollo y las necesidades del
+sector agropecuario.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+Contacto
+</h4>
+
+<div class="footer-links">
+
+<p>
+📍 Jr. Jose Manuel Iturregui A Nro. 119
+Urb. Cercado - Surquillo - Lima
+</p>
+
+<p>
+☎ Teléfono
+</p>
+
+<p>
+✉ central.ventas@masteragro.mx
+</p>
+
+<p>
+💬 +51 962 746 435
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+Enlaces
+</h4>
+
+<div class="footer-links">
+
+<a href="index.html#inicio">
+Inicio
+</a>
+
+<a href="productos.html">
+Productos
+</a>
+
+<a href="index.html#noticias">
+Noticias
+</a>
+
+<a href="index.html#catalogo">
+Catálogo
+</a>
+
+<a href="index.html#contacto">
+Contacto
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+Síguenos
+</h4>
+
+<p style="margin-bottom:15px;">
+Encontranos en nuestras redes sociales.
+</p>
+
+<div class="socials">
+
+<a href="#" class="social">
+f
+</a>
+
+<a href="#" class="social">
+ig
+</a>
+
+<a href="#" class="social">
+in
+</a>
+
+<a href="#" class="social">
+tk
+</a>
+
+<a
+href="https://wa.me/51970859150"
+class="social"
+target="_blank"
+rel="noopener noreferrer">
+
+wa
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Master Agro Business S.A.C.
+Todos los derechos reservados.
+
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<a
+href="https://wa.me/51970859150"
+class="floating-whatsapp"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Contactar por WhatsApp">
+
+<span>
+☏
+</span>
+
+</a>
+
+
+<!-- =====================================================
+     VOLVER ARRIBA
+===================================================== -->
+
+<button
+id="backToTop"
+class="back-to-top"
+aria-label="Volver arriba">
+
+↑
+
+</button>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   FILTROS
+===================================================== */
+
+const filterButtons =
+    document.querySelectorAll(
+        ".filter-button"
+    );
+
+
+const productLines =
+    document.querySelectorAll(
+        ".product-line"
+    );
+
+
+filterButtons.forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                const filter =
+                    button.dataset.filter;
+
+
+                filterButtons.forEach(
+                    item => {
+
+                        item.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                button.classList.add(
+                    "active"
+                );
+
+
+                productLines.forEach(
+                    line => {
+
+                        if (
+                            filter === "todos" ||
+                            line.dataset.line === filter
+                        ) {
+
+                            line.classList.remove(
+                                "hidden"
+                            );
+
+                        } else {
+
+                            line.classList.add(
+                                "hidden"
+                            );
+
+                        }
+
+                    }
+                );
+
+
+                document
+                    .querySelector(".products-section")
+                    .scrollIntoView({
+
+                        behavior:
+                            "smooth",
+
+                        block:
+                            "start"
+
+                    });
+
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   VOLVER ARRIBA
+===================================================== */
+
+const backToTop =
+    document.getElementById(
+        "backToTop"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if (
+            window.scrollY > 400
+        ) {
+
+            backToTop.classList.add(
+                "show"
+            );
+
+        } else {
+
+            backToTop.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+
+backToTop.addEventListener(
+    "click",
+    () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior:
+                "smooth"
+
+        });
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
