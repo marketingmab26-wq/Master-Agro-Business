@@ -1,0 +1,2733 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Rizoma | Master Agro
+</title>
+
+<meta
+    name="description"
+    content="Rizoma - Producto de Master Agro."
+>
+
+
+<style>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --verde: #176b3a;
+
+    --verde-oscuro: #0d4526;
+
+    --verde-claro: #eaf5ed;
+
+    --negro: #151b17;
+
+    --gris: #68716b;
+
+    --gris-claro: #f5f7f5;
+
+    --blanco: #ffffff;
+
+    --sombra:
+        0 12px 35px rgba(0,0,0,.08);
+
+    --radio: 18px;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color:
+        var(--negro);
+
+    background:
+        var(--blanco);
+
+    line-height:
+        1.6;
+
+}
+
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+button {
+
+    font-family: inherit;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(255,255,255,.96);
+
+    backdrop-filter:
+        blur(10px);
+
+    border-bottom:
+        1px solid #e8ece9;
+
+}
+
+
+.header-container {
+
+    max-width: 1250px;
+
+    height: 78px;
+
+    margin: auto;
+
+    padding:
+        0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    color:
+        var(--verde);
+
+    letter-spacing:
+        -1px;
+
+}
+
+
+.logo span {
+
+    color:
+        var(--negro);
+
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.menu a {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color:
+        #39443d;
+
+    transition:
+        .25s;
+
+}
+
+
+.menu a:hover {
+
+    color:
+        var(--verde);
+
+}
+
+
+.menu-button {
+
+    background:
+        var(--verde);
+
+    color:
+        white !important;
+
+    padding:
+        11px 20px;
+
+    border-radius:
+        30px;
+
+}
+
+
+.menu-button:hover {
+
+    background:
+        var(--verde-oscuro);
+
+}
+
+
+/* =====================================================
+   CONTENIDO
+===================================================== */
+
+main {
+
+    padding-top:
+        78px;
+
+}
+
+
+/* =====================================================
+   HERO PRODUCTO
+===================================================== */
+
+.product-hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f8f5,
+            #eaf5ed
+        );
+
+    padding:
+        80px 25px;
+
+}
+
+
+.product-hero-container {
+
+    max-width:
+        1200px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        70px;
+
+}
+
+
+/* =====================================================
+   INFORMACIÓN HERO
+===================================================== */
+
+.product-category {
+
+    display:
+        inline-block;
+
+    color:
+        var(--verde);
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1.5px;
+
+    margin-bottom:
+        14px;
+
+}
+
+
+.product-hero h1 {
+
+    font-size:
+        clamp(45px,6vw,75px);
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -3px;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.product-subtitle {
+
+    color:
+        var(--gris);
+
+    font-size:
+        18px;
+
+    max-width:
+        550px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.product-tag {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    background:
+        white;
+
+    padding:
+        10px 17px;
+
+    border-radius:
+        30px;
+
+    color:
+        var(--verde-oscuro);
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.06);
+
+}
+
+
+/* =====================================================
+   IMAGEN PRODUCTO
+===================================================== */
+
+.product-image-box {
+
+    min-height:
+        500px;
+
+    background:
+        white;
+
+    border-radius:
+        28px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        35px;
+
+    box-shadow:
+        var(--sombra);
+
+}
+
+
+.product-image-box img {
+
+    width:
+        100%;
+
+    max-width:
+        430px;
+
+    max-height:
+        470px;
+
+    object-fit:
+        contain;
+
+}
+
+
+/* =====================================================
+   PESTAÑAS
+===================================================== */
+
+.product-tabs-section {
+
+    padding:
+        80px 25px;
+
+}
+
+
+.product-tabs-container {
+
+    max-width:
+        1050px;
+
+    margin:
+        auto;
+
+}
+
+
+.tabs {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    gap:
+        5px;
+
+    background:
+        var(--gris-claro);
+
+    padding:
+        6px;
+
+    border-radius:
+        50px;
+
+    margin-bottom:
+        45px;
+
+}
+
+
+.tab-button {
+
+    flex:
+        1;
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    padding:
+        15px 20px;
+
+    border-radius:
+        40px;
+
+    color:
+        var(--gris);
+
+    font-size:
+        14px;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+
+    transition:
+        .25s;
+
+}
+
+
+.tab-button:hover {
+
+    color:
+        var(--verde);
+
+}
+
+
+.tab-button.active {
+
+    background:
+        var(--verde);
+
+    color:
+        white;
+
+    box-shadow:
+        0 5px 18px rgba(23,107,58,.20);
+
+}
+
+
+/* =====================================================
+   CONTENIDO TABS
+===================================================== */
+
+.tab-content {
+
+    display:
+        none;
+
+    animation:
+        fadeIn .3s ease;
+
+}
+
+
+.tab-content.active {
+
+    display:
+        block;
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   TITULOS
+===================================================== */
+
+.content-title {
+
+    font-size:
+        32px;
+
+    line-height:
+        1.2;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.content-title span {
+
+    color:
+        var(--verde);
+
+}
+
+
+.product-content {
+
+    color:
+        #39443d;
+
+    font-size:
+        16px;
+
+}
+
+
+.product-content p {
+
+    margin-bottom:
+        22px;
+
+}
+
+
+.product-content h3 {
+
+    color:
+        var(--negro);
+
+    font-size:
+        21px;
+
+    margin:
+        35px 0 12px;
+
+}
+
+
+.product-content ul {
+
+    margin:
+        15px 0 25px 25px;
+
+}
+
+
+.product-content li {
+
+    margin-bottom:
+        10px;
+
+}
+
+
+/* =====================================================
+   DESTACADO
+===================================================== */
+
+.product-highlight {
+
+    background:
+        var(--verde-claro);
+
+    border-left:
+        5px solid var(--verde);
+
+    padding:
+        25px;
+
+    border-radius:
+        0 15px 15px 0;
+
+    margin:
+        30px 0;
+
+}
+
+
+.product-highlight strong {
+
+    color:
+        var(--verde-oscuro);
+
+}
+
+
+/* =====================================================
+   COMPOSICIÓN
+===================================================== */
+
+.composition-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:
+        20px;
+
+    margin-top:
+        25px;
+
+}
+
+
+.composition-card {
+
+    background:
+        var(--gris-claro);
+
+    border:
+        1px solid #e5e9e6;
+
+    border-radius:
+        15px;
+
+    padding:
+        22px;
+
+}
+
+
+.composition-card span {
+
+    display:
+        block;
+
+    color:
+        var(--verde);
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        6px;
+
+}
+
+
+.composition-card strong {
+
+    font-size:
+        18px;
+
+}
+
+
+/* =====================================================
+   DOCUMENTOS
+===================================================== */
+
+.documents-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        20px;
+
+    margin-top:
+        30px;
+
+}
+
+
+.document-card {
+
+    border:
+        1px solid #e3e8e4;
+
+    border-radius:
+        18px;
+
+    padding:
+        28px 20px;
+
+    text-align:
+        center;
+
+    transition:
+        .3s;
+
+    background:
+        white;
+
+}
+
+
+.document-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--sombra);
+
+    border-color:
+        #cfe2d4;
+
+}
+
+
+.document-icon {
+
+    width:
+        60px;
+
+    height:
+        60px;
+
+    margin:
+        0 auto 15px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--verde-claro);
+
+    color:
+        var(--verde);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-size:
+        25px;
+
+}
+
+
+.document-card h3 {
+
+    font-size:
+        17px;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.document-card p {
+
+    color:
+        var(--gris);
+
+    font-size:
+        12px;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.document-button {
+
+    display:
+        inline-block;
+
+    background:
+        var(--verde);
+
+    color:
+        white;
+
+    padding:
+        10px 17px;
+
+    border-radius:
+        25px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    transition:
+        .25s;
+
+}
+
+
+.document-button:hover {
+
+    background:
+        var(--verde-oscuro);
+
+}
+
+
+/* =====================================================
+   PRODUCTOS RELACIONADOS
+===================================================== */
+
+.related-products {
+
+    background:
+        var(--gris-claro);
+
+    padding:
+        80px 25px;
+
+}
+
+
+.related-products-container {
+
+    max-width:
+        1200px;
+
+    margin:
+        auto;
+
+}
+
+
+.section-title {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        40px;
+
+}
+
+
+.section-title small {
+
+    display:
+        block;
+
+    color:
+        var(--verde);
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1.5px;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.section-title h2 {
+
+    font-size:
+        clamp(30px,4vw,42px);
+
+    letter-spacing:
+        -1px;
+
+}
+
+
+.products-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:
+        18px;
+
+}
+
+
+.product-card {
+
+    background:
+        white;
+
+    border:
+        1px solid #e5e9e6;
+
+    border-radius:
+        18px;
+
+    overflow:
+        hidden;
+
+    transition:
+        .3s;
+
+}
+
+
+.product-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--sombra);
+
+}
+
+
+.product-card-image {
+
+    height:
+        200px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        15px;
+
+    background:
+        white;
+
+}
+
+
+.product-card-image img {
+
+    height:
+        100%;
+
+    object-fit:
+        contain;
+
+}
+
+
+.product-card-content {
+
+    padding:
+        18px;
+
+}
+
+
+.product-card-content h3 {
+
+    font-size:
+        18px;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.product-card-content p {
+
+    color:
+        var(--gris);
+
+    font-size:
+        12px;
+
+    margin-bottom:
+        12px;
+
+}
+
+
+.product-card-link {
+
+    color:
+        var(--verde);
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background:
+        #0a2415;
+
+    color:
+        white;
+
+    padding:
+        65px 25px 25px;
+
+}
+
+
+.footer-grid {
+
+    max-width:
+        1250px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr 1fr;
+
+    gap:
+        45px;
+
+    padding-bottom:
+        45px;
+
+}
+
+
+.footer-logo {
+
+    font-size:
+        25px;
+
+    font-weight:
+        900;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.footer-column h4 {
+
+    margin-bottom:
+        17px;
+
+    font-size:
+        15px;
+
+}
+
+
+.footer-column p {
+
+    color:
+        rgba(255,255,255,.6);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+
+}
+
+
+.footer-links {
+
+    display:
+        grid;
+
+    gap:
+        9px;
+
+}
+
+
+.footer-links a {
+
+    color:
+        rgba(255,255,255,.6);
+
+    font-size:
+        13px;
+
+    transition:
+        .2s;
+
+}
+
+
+.footer-links a:hover {
+
+    color:
+        white;
+
+}
+
+
+/* =====================================================
+   REDES
+===================================================== */
+
+.socials {
+
+    display:
+        flex;
+
+    gap:
+        9px;
+
+    flex-wrap:
+        wrap;
+
+}
+
+
+.social {
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    border-radius:
+        50%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-size:
+        13px;
+
+    transition:
+        .25s;
+
+}
+
+
+.social:hover {
+
+    background:
+        white;
+
+    color:
+        var(--verde);
+
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.copyright {
+
+    max-width:
+        1250px;
+
+    margin:
+        auto;
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid rgba(255,255,255,.1);
+
+    color:
+        rgba(255,255,255,.4);
+
+    font-size:
+        11px;
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.floating-whatsapp {
+
+    position:
+        fixed;
+
+    right:
+        25px;
+
+    bottom:
+        25px;
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    border-radius:
+        50%;
+
+    background:
+        #25D366;
+
+    color:
+        white;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    z-index:
+        9999;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.20);
+
+    transition:
+        .25s;
+
+}
+
+
+.floating-whatsapp:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.05);
+
+}
+
+
+.floating-whatsapp span {
+
+    font-size:
+        29px;
+
+}
+
+
+/* =====================================================
+   VOLVER ARRIBA
+===================================================== */
+
+.back-to-top {
+
+    position:
+        fixed;
+
+    right:
+        25px;
+
+    bottom:
+        95px;
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    border:
+        none;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--verde);
+
+    color:
+        white;
+
+    font-size:
+        22px;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+
+    z-index:
+        9998;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        translateY(15px);
+
+    transition:
+        .3s;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.18);
+
+}
+
+
+.back-to-top.show {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width:1100px) {
+
+    .products-grid {
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+    }
+
+}
+
+
+@media (max-width:950px) {
+
+    .menu {
+
+        display:
+            none;
+
+    }
+
+
+    .product-hero-container {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .product-image-box {
+
+        min-height:
+            400px;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+@media (max-width:700px) {
+
+    .tabs {
+
+        border-radius:
+            18px;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .tab-button {
+
+        width:
+            100%;
+
+    }
+
+
+    .composition-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .documents-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .products-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+@media (max-width:600px) {
+
+    .header-container {
+
+        padding:
+            0 18px;
+
+    }
+
+
+    .product-hero {
+
+        padding:
+            55px 18px;
+
+    }
+
+
+    .product-hero h1 {
+
+        font-size:
+            50px;
+
+    }
+
+
+    .product-subtitle {
+
+        font-size:
+            16px;
+
+    }
+
+
+    .product-image-box {
+
+        min-height:
+            350px;
+
+        padding:
+            25px;
+
+        border-radius:
+            20px;
+
+    }
+
+
+    .product-tabs-section {
+
+        padding:
+            55px 18px;
+
+    }
+
+
+    .content-title {
+
+        font-size:
+            28px;
+
+    }
+
+
+    .products-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .related-products {
+
+        padding:
+            60px 18px;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .floating-whatsapp {
+
+        width:
+            53px;
+
+        height:
+            53px;
+
+        right:
+            17px;
+
+        bottom:
+            17px;
+
+    }
+
+
+    .back-to-top {
+
+        width:
+            44px;
+
+        height:
+            44px;
+
+        right:
+            21px;
+
+        bottom:
+            80px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="header-container">
+
+    <a
+        href="index.html"
+        class="logo">
+
+        MASTER <span>AGRO</span>
+
+    </a>
+
+
+    <nav class="menu">
+
+        <a href="index.html#inicio">
+            Inicio
+        </a>
+
+        <a href="index.html#productos">
+            Productos
+        </a>
+
+        <a href="index.html#noticias">
+            Noticias
+        </a>
+
+        <a href="index.html#catalogo">
+            Catálogo
+        </a>
+
+        <a href="index.html#contacto">
+            Contacto
+        </a>
+
+        <a
+            href="https://ferozo.email/"
+            class="menu-button">
+
+            Intranet
+
+        </a>
+
+    </nav>
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     CONTENIDO
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO DEL PRODUCTO
+===================================================== -->
+
+<section class="product-hero">
+
+<div class="product-hero-container">
+
+
+    <div>
+
+        <span class="product-category">
+            Producto Master Agro
+        </span>
+
+
+        <h1>
+            RIZOMA
+        </h1>
+
+
+        <p class="product-subtitle">
+
+            Solución agrícola desarrollada para
+            acompañar el crecimiento y desarrollo
+            de los cultivos.
+
+        </p>
+
+
+        <div class="product-tag">
+
+            🌱 Solución para la agricultura
+
+        </div>
+
+    </div>
+
+
+    <div class="product-image-box">
+
+        <img
+            src="assets/productos/rizoma.png"
+            alt="Rizoma - Master Agro">
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PESTAÑAS
+===================================================== -->
+
+<section class="product-tabs-section">
+
+<div class="product-tabs-container">
+
+
+    <div class="tabs">
+
+        <button
+            class="tab-button active"
+            data-tab="descripcion">
+
+            Descripción
+
+        </button>
+
+
+        <button
+            class="tab-button"
+            data-tab="composicion">
+
+            Composición y uso
+
+        </button>
+
+
+        <button
+            class="tab-button"
+            data-tab="documentos">
+
+            Documentos
+
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         TAB 1
+    ================================================== -->
+
+    <div
+        id="descripcion"
+        class="tab-content active">
+
+        <div class="product-content">
+
+            <h2 class="content-title">
+
+                Sobre <span>Rizoma</span>
+
+            </h2>
+
+
+            <p>
+
+                Rizoma es un producto desarrollado
+                para acompañar el manejo agrícola
+                y contribuir al adecuado desarrollo
+                de los cultivos.
+
+            </p>
+
+
+            <p>
+
+                Su formulación está orientada a
+                complementar las necesidades del
+                cultivo dentro de un programa
+                integral de manejo.
+
+            </p>
+
+
+            <div class="product-highlight">
+
+                <strong>
+                    Recomendación:
+                </strong>
+
+                Utilizar el producto de acuerdo
+                con las indicaciones establecidas
+                en su ficha técnica y etiqueta.
+
+            </div>
+
+
+            <h3>
+                Beneficios
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    Complementa el manejo del cultivo.
+                </li>
+
+                <li>
+                    Facilita la incorporación del
+                    producto dentro del programa agrícola.
+                </li>
+
+                <li>
+                    Puede utilizarse de acuerdo con
+                    las recomendaciones técnicas.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         TAB 2
+    ================================================== -->
+
+    <div
+        id="composicion"
+        class="tab-content">
+
+        <div class="product-content">
+
+            <h2 class="content-title">
+
+                Composición y
+                <span>recomendaciones</span>
+
+            </h2>
+
+
+            <p>
+
+                La información correspondiente a la
+                composición garantizada y características
+                técnicas de Rizoma debe consultarse
+                en la documentación oficial del producto.
+
+            </p>
+
+
+            <div class="composition-grid">
+
+
+                <div class="composition-card">
+
+                    <span>
+                        Producto
+                    </span>
+
+                    <strong>
+                        Rizoma
+                    </strong>
+
+                </div>
+
+
+                <div class="composition-card">
+
+                    <span>
+                        Categoría
+                    </span>
+
+                    <strong>
+                        Producto agrícola
+                    </strong>
+
+                </div>
+
+
+                <div class="composition-card">
+
+                    <span>
+                        Presentación
+                    </span>
+
+                    <strong>
+                        Consultar ficha técnica
+                    </strong>
+
+                </div>
+
+
+                <div class="composition-card">
+
+                    <span>
+                        Aplicación
+                    </span>
+
+                    <strong>
+                        Según recomendación técnica
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <h3>
+                Recomendaciones de uso
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    Leer cuidadosamente la etiqueta
+                    antes de utilizar el producto.
+                </li>
+
+                <li>
+                    Seguir las dosis y recomendaciones
+                    indicadas en la ficha técnica.
+                </li>
+
+                <li>
+                    Utilizar equipo de protección
+                    cuando corresponda.
+                </li>
+
+                <li>
+                    Mantener el producto fuera del
+                    alcance de personas no autorizadas.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         TAB 3
+    ================================================== -->
+
+    <div
+        id="documentos"
+        class="tab-content">
+
+        <div class="product-content">
+
+            <h2 class="content-title">
+
+                Documentos del
+                <span>producto</span>
+
+            </h2>
+
+
+            <p>
+
+                Consulta y descarga la documentación
+                técnica correspondiente a Rizoma.
+
+            </p>
+
+
+            <div class="documents-grid">
+
+
+                <!-- FICHA TÉCNICA -->
+
+                <div class="document-card">
+
+                    <div class="document-icon">
+                        📄
+                    </div>
+
+                    <h3>
+                        Ficha Técnica
+                    </h3>
+
+                    <p>
+                        Información técnica,
+                        características y recomendaciones.
+                    </p>
+
+                    <a
+                        href="assets/documentos/rizoma-ficha-tecnica.pdf"
+                        class="document-button"
+                        target="_self">
+
+                        Ver documento
+
+                    </a>
+
+                </div>
+
+
+                <!-- HOJA DE SEGURIDAD -->
+
+                <div class="document-card">
+
+                    <div class="document-icon">
+                        🛡️
+                    </div>
+
+                    <h3>
+                        Hoja de Seguridad
+                    </h3>
+
+                    <p>
+                        Información de seguridad,
+                        manipulación y almacenamiento.
+                    </p>
+
+                    <a
+                        href="assets/documentos/rizoma-hoja-seguridad.pdf"
+                        class="document-button"
+                        target="_self">
+
+                        Ver documento
+
+                    </a>
+
+                </div>
+
+
+                <!-- ETIQUETA -->
+
+                <div class="document-card">
+
+                    <div class="document-icon">
+                        🏷️
+                    </div>
+
+                    <h3>
+                        Etiqueta
+                    </h3>
+
+                    <p>
+                        Etiqueta oficial y recomendaciones
+                        de uso del producto.
+                    </p>
+
+                    <a
+                        href="assets/documentos/rizoma-etiqueta.pdf"
+                        class="document-button"
+                        target="_self">
+
+                        Ver documento
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUCTOS RELACIONADOS
+===================================================== -->
+
+<section class="related-products">
+
+<div class="related-products-container">
+
+
+    <div class="section-title">
+
+        <small>
+            Portafolio
+        </small>
+
+        <h2>
+            Otros productos
+        </h2>
+
+    </div>
+
+
+    <div class="products-grid">
+
+
+        <!-- LOTUSS -->
+
+        <a
+            href="producto-lotuss.html"
+            class="product-card">
+
+            <div class="product-card-image">
+
+                <img
+                    src="assets/productos/lotuss.png"
+                    alt="Lotuss">
+
+            </div>
+
+            <div class="product-card-content">
+
+                <h3>
+                    Lotuss
+                </h3>
+
+                <p>
+                    Producto agrícola Master Agro.
+                </p>
+
+                <span class="product-card-link">
+                    Ver producto →
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- SYMBIOSIS -->
+
+        <a
+            href="producto-symbiosis.html"
+            class="product-card">
+
+            <div class="product-card-image">
+
+                <img
+                    src="assets/productos/symbiosis.png"
+                    alt="Symbiosis">
+
+            </div>
+
+            <div class="product-card-content">
+
+                <h3>
+                    Symbiosis
+                </h3>
+
+                <p>
+                    Producto agrícola Master Agro.
+                </p>
+
+                <span class="product-card-link">
+                    Ver producto →
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- VENONAT -->
+
+        <a
+            href="producto-venonat.html"
+            class="product-card">
+
+            <div class="product-card-image">
+
+                <img
+                    src="assets/productos/venonat.png"
+                    alt="Venonat">
+
+            </div>
+
+            <div class="product-card-content">
+
+                <h3>
+                    Venonat
+                </h3>
+
+                <p>
+                    Producto agrícola Master Agro.
+                </p>
+
+                <span class="product-card-link">
+                    Ver producto →
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- ORBIX -->
+
+        <a
+            href="producto-orbix.html"
+            class="product-card">
+
+            <div class="product-card-image">
+
+                <img
+                    src="assets/productos/orbix.png"
+                    alt="Orbix">
+
+            </div>
+
+            <div class="product-card-content">
+
+                <h3>
+                    Orbix
+                </h3>
+
+                <p>
+                    Producto agrícola Master Agro.
+                </p>
+
+                <span class="product-card-link">
+                    Ver producto →
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- SALICINA -->
+
+        <a
+            href="producto-salicina.html"
+            class="product-card">
+
+            <div class="product-card-image">
+
+                <img
+                    src="assets/productos/salicina.png"
+                    alt="Salicina">
+
+            </div>
+
+            <div class="product-card-content">
+
+                <h3>
+                    Salicina
+                </h3>
+
+                <p>
+                    Producto agrícola Master Agro.
+                </p>
+
+                <span class="product-card-link">
+                    Ver producto →
+                </span>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer id="contacto">
+
+<div class="footer-grid">
+
+
+    <!-- EMPRESA -->
+
+    <div class="footer-column">
+
+        <div class="footer-logo">
+            MASTER AGRO
+        </div>
+
+        <p>
+
+            Soluciones agrícolas para acompañar
+            el desarrollo y las necesidades del
+            sector agropecuario.
+
+        </p>
+
+    </div>
+
+
+    <!-- CONTACTO -->
+
+    <div class="footer-column">
+
+        <h4>
+            Contacto
+        </h4>
+
+        <div class="footer-links">
+
+            <p>
+                📍 Jr. Jose Manuel Iturregui A Nro. 119
+                Urb. Cercado - Surquillo - Lima
+            </p>
+
+            <p>
+                ☎ Teléfono
+            </p>
+
+            <p>
+                ✉ central.ventas@masteragro.mx
+            </p>
+
+            <p>
+                💬 +51 962 746 435
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ENLACES -->
+
+    <div class="footer-column">
+
+        <h4>
+            Enlaces
+        </h4>
+
+        <div class="footer-links">
+
+            <a href="index.html#inicio">
+                Inicio
+            </a>
+
+            <a href="index.html#productos">
+                Productos
+            </a>
+
+            <a href="index.html#noticias">
+                Noticias
+            </a>
+
+            <a href="index.html#catalogo">
+                Catálogo
+            </a>
+
+            <a href="index.html#contacto">
+                Contacto
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- REDES -->
+
+    <div class="footer-column">
+
+        <h4>
+            Síguenos
+        </h4>
+
+        <p style="margin-bottom:15px;">
+            Encontranos en nuestras redes sociales.
+        </p>
+
+
+        <div class="socials">
+
+            <a
+                href="#"
+                class="social"
+                aria-label="Facebook">
+
+                f
+
+            </a>
+
+
+            <a
+                href="#"
+                class="social"
+                aria-label="Instagram">
+
+                ig
+
+            </a>
+
+
+            <a
+                href="#"
+                class="social"
+                aria-label="LinkedIn">
+
+                in
+
+            </a>
+
+
+            <a
+                href="#"
+                class="social"
+                aria-label="TikTok">
+
+                tk
+
+            </a>
+
+
+            <a
+                href="https://wa.me/51970859150"
+                class="social"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp">
+
+                wa
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="copyright">
+
+    © 2026 Master Agro Business S.A.C.
+    Todos los derechos reservados.
+
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<a
+    href="https://wa.me/51970859150"
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp">
+
+    <span>
+        ☏
+    </span>
+
+</a>
+
+
+<!-- =====================================================
+     VOLVER ARRIBA
+===================================================== -->
+
+<button
+    id="backToTop"
+    class="back-to-top"
+    aria-label="Volver arriba">
+
+    ↑
+
+</button>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   PESTAÑAS
+===================================================== */
+
+const tabButtons =
+    document.querySelectorAll(".tab-button");
+
+const tabContents =
+    document.querySelectorAll(".tab-content");
+
+
+tabButtons.forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                const target =
+                    button.dataset.tab;
+
+
+                tabButtons.forEach(
+                    item => {
+
+                        item.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                tabContents.forEach(
+                    content => {
+
+                        content.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                button.classList.add(
+                    "active"
+                );
+
+
+                document
+                    .getElementById(target)
+                    .classList.add("active");
+
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   VOLVER ARRIBA
+===================================================== */
+
+const backToTop =
+    document.getElementById(
+        "backToTop"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    function () {
+
+        if (
+            window.scrollY > 400
+        ) {
+
+            backToTop.classList.add(
+                "show"
+            );
+
+        } else {
+
+            backToTop.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+
+backToTop.addEventListener(
+    "click",
+    function () {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
