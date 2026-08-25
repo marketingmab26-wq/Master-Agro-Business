@@ -799,6 +799,58 @@
             font-weight: 900;
         }
 
+        /* =====================================================
+   BOTONES DESACTIVADOS
+===================================================== */
+
+.flip-button.disabled {
+
+    opacity: .25;
+
+    cursor:
+        default;
+
+    pointer-events:
+        none;
+
+    transform:
+        translateY(-50%)
+        scale(.95);
+
+}
+
+
+.flip-button.disabled:hover {
+
+    background:
+        white;
+
+    color:
+        var(--verde);
+
+}
+
+
+/* =====================================================
+   EVITAR PARPADEO INICIAL
+===================================================== */
+
+.flipbook {
+
+    opacity: 0;
+
+    transition:
+        opacity .2s ease;
+
+}
+
+
+.catalogo-modal.active .flipbook {
+
+    opacity: 1;
+
+}
+        
 
         /* =====================================================
            FOOTER
@@ -2356,9 +2408,14 @@
 
 .flipbook {
 
-    width: min(850px, 80vw);
+    width:
+        min(850px, 78vw);
 
-    height: min(80vh, 650px);
+    height:
+        min(78vh, 650px);
+
+    margin:
+        0 auto;
 
 }
 
@@ -2697,7 +2754,7 @@ body.catalogo-abierto {
     <script>
 
 /* =====================================================
-   CONFIGURACIÓN CATÁLOGO
+   CATÁLOGO VIRTUAL MASTER AGRO
 ===================================================== */
 
 const PDF_CATALOGO =
@@ -2747,9 +2804,11 @@ let pageFlip = null;
 
 let zoom = 1;
 
+let catalogoCargado = false;
+
 
 /* =====================================================
-   ABRIR CATÁLOGO
+   ABRIR
 ===================================================== */
 
 abrirCatalogo.addEventListener(
@@ -2763,18 +2822,31 @@ abrirCatalogo.addEventListener(
         );
 
 
-        if (!pageFlip) {
+        /*
+         Esperamos un frame para que el navegador
+         conozca el tamaño REAL del modal.
+        */
 
-            await cargarCatalogo();
+        requestAnimationFrame(async () => {
 
-        }
+            requestAnimationFrame(async () => {
+
+                if (!catalogoCargado) {
+
+                    await cargarCatalogo();
+
+                }
+
+            });
+
+        });
 
     }
 );
 
 
 /* =====================================================
-   CERRAR CATÁLOGO
+   CERRAR
 ===================================================== */
 
 cerrarCatalogo.addEventListener(
@@ -2796,9 +2868,7 @@ function cerrarRevista() {
 }
 
 
-/* =====================================================
-   ESCAPE
-===================================================== */
+/* ESC */
 
 document.addEventListener(
     "keydown",
@@ -2820,6 +2890,65 @@ document.addEventListener(
 
 
 /* =====================================================
+   OBTENER TAMAÑO DEL VISOR
+===================================================== */
+
+function obtenerTamañoVisor() {
+
+    const ancho =
+        flipbook.clientWidth;
+
+    const alto =
+        flipbook.clientHeight;
+
+
+    /*
+       Mantener proporción aproximada
+       de una hoja A4.
+    */
+
+    const proporcion =
+        1.414;
+
+
+    let width =
+        Math.min(
+            ancho,
+            alto / proporcion
+        );
+
+
+    let height =
+        width * proporcion;
+
+
+    /*
+       Evitar tamaños demasiado pequeños
+    */
+
+    width =
+        Math.max(
+            280,
+            width
+        );
+
+
+    height =
+        Math.max(
+            400,
+            height
+        );
+
+
+    return {
+        width,
+        height
+    };
+
+}
+
+
+/* =====================================================
    CARGAR PDF
 ===================================================== */
 
@@ -2828,8 +2957,14 @@ async function cargarCatalogo() {
     try {
 
         pageInfo.textContent =
-            "Cargando catálogo...";
+            "Preparando catálogo...";
 
+
+        /*
+        =============================================
+        CARGAR PDF
+        =============================================
+        */
 
         const pdf =
             await pdfjsLib.getDocument(
@@ -2840,7 +2975,11 @@ async function cargarCatalogo() {
         const paginas = [];
 
 
-        /* CREAR PÁGINAS */
+        /*
+        =============================================
+        CREAR PÁGINAS
+        =============================================
+        */
 
         for (
             let i = 1;
@@ -2915,56 +3054,98 @@ async function cargarCatalogo() {
         }
 
 
-        /* =================================================
-           CREAR REVISTA
-        ================================================= */
+        /*
+        =============================================
+        OBTENER TAMAÑO REAL
+        =============================================
+        */
+
+        const tamaño =
+            obtenerTamañoVisor();
+
+
+        /*
+        =============================================
+        CREAR FLIPBOOK
+        =============================================
+        */
 
         pageFlip =
             new St.PageFlip(
                 flipbook,
                 {
 
-                    width: 500,
+                    width:
+                        tamaño.width,
 
-                    height: 707,
+                    height:
+                        tamaño.height,
 
-                    size: "stretch",
+                    size:
+                        "stretch",
 
-                    minWidth: 280,
+                    minWidth:
+                        280,
 
-                    maxWidth: 850,
+                    maxWidth:
+                        900,
 
-                    minHeight: 400,
+                    minHeight:
+                        400,
 
-                    maxHeight: 900,
+                    maxHeight:
+                        1000,
 
-                    showCover: true,
+                    showCover:
+                        true,
 
-                    drawShadow: true,
+                    drawShadow:
+                        true,
 
-                    flippingTime: 700,
+                    flippingTime:
+                        650,
 
-                    usePortrait: true,
+                    usePortrait:
+                        true,
 
-                    mobileScrollSupport: true,
+                    mobileScrollSupport:
+                        true,
 
-                    startPage: 0
+                    startPage:
+                        0,
+
+                    maxShadowOpacity:
+                        .35
 
                 }
             );
 
+
+        /*
+        =============================================
+        CARGAR PÁGINAS
+        =============================================
+        */
 
         pageFlip.loadFromHTML(
             paginas
         );
 
 
-        /* EVENTO */
+        /*
+        =============================================
+        EVENTO CAMBIO DE PÁGINA
+        =============================================
+        */
 
         pageFlip.on(
             "flip",
             actualizarPagina
         );
+
+
+        catalogoCargado =
+            true;
 
 
         actualizarPagina();
@@ -2973,13 +3154,13 @@ async function cargarCatalogo() {
     } catch (error) {
 
         console.error(
-            "Error:",
+            "Error cargando catálogo:",
             error
         );
 
 
         pageInfo.textContent =
-            "No se pudo cargar el catálogo.";
+            "Error al cargar el catálogo.";
 
     }
 
@@ -2987,7 +3168,7 @@ async function cargarCatalogo() {
 
 
 /* =====================================================
-   PÁGINA ACTUAL
+   ACTUALIZAR PAGINACIÓN
 ===================================================== */
 
 function actualizarPagina() {
@@ -2997,15 +3178,65 @@ function actualizarPagina() {
 
 
     const actual =
-        pageFlip.getCurrentPageIndex() + 1;
+        pageFlip.getCurrentPageIndex();
 
 
     const total =
         pageFlip.getPageCount();
 
 
+    /*
+       Mostrar página humana
+    */
+
     pageInfo.textContent =
-        `Página ${actual} de ${total}`;
+        `Página ${actual + 1} de ${total}`;
+
+
+    /*
+       BLOQUEAR ANTERIOR
+    */
+
+    if (actual <= 0) {
+
+        prevPage.disabled = true;
+
+        prevPage.classList.add(
+            "disabled"
+        );
+
+    } else {
+
+        prevPage.disabled = false;
+
+        prevPage.classList.remove(
+            "disabled"
+        );
+
+    }
+
+
+    /*
+       BLOQUEAR SIGUIENTE
+    */
+
+    if (actual >= total - 1) {
+
+        nextPage.disabled = true;
+
+        nextPage.classList.add(
+            "disabled"
+        );
+
+    } else {
+
+        nextPage.disabled = false;
+
+        nextPage.classList.remove(
+            "disabled"
+        );
+
+    }
 
 }
 
@@ -3018,7 +3249,10 @@ prevPage.addEventListener(
     "click",
     function () {
 
-        if (pageFlip) {
+        if (
+            pageFlip &&
+            !prevPage.disabled
+        ) {
 
             pageFlip.flipPrev();
 
@@ -3036,7 +3270,10 @@ nextPage.addEventListener(
     "click",
     function () {
 
-        if (pageFlip) {
+        if (
+            pageFlip &&
+            !nextPage.disabled
+        ) {
 
             pageFlip.flipNext();
 
@@ -3056,8 +3293,12 @@ zoomIn.addEventListener(
 
         zoom += .1;
 
-        if (zoom > 1.5)
-            zoom = 1.5;
+
+        if (zoom > 1.4) {
+
+            zoom = 1.4;
+
+        }
 
 
         flipbook.style.transform =
@@ -3073,8 +3314,12 @@ zoomOut.addEventListener(
 
         zoom -= .1;
 
-        if (zoom < .8)
-            zoom = .8;
+
+        if (zoom < .85) {
+
+            zoom = .85;
+
+        }
 
 
         flipbook.style.transform =
@@ -3101,6 +3346,43 @@ fullscreenCatalogo.addEventListener(
         } else {
 
             document.exitFullscreen();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   RECALCULAR AL CAMBIAR TAMAÑO
+===================================================== */
+
+window.addEventListener(
+    "resize",
+    function () {
+
+        if (
+            modalCatalogo.classList.contains(
+                "active"
+            )
+        ) {
+
+            /*
+              PageFlip se adapta automáticamente
+              al contenedor.
+            */
+
+            if (pageFlip) {
+
+                const tamaño =
+                    obtenerTamañoVisor();
+
+
+                pageFlip.updateFromImages(
+                    []
+                );
+
+            }
 
         }
 
