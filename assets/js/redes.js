@@ -6,10 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     redes.innerHTML = `
 
-        <!-- FACEBOOK -->
         <a
             href="#"
-            class="floating-social facebook"
+            class="floating-social floating-facebook"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook">
@@ -19,10 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
 
 
-        <!-- INSTAGRAM -->
         <a
             href="#"
-            class="floating-social instagram"
+            class="floating-social floating-instagram"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram">
@@ -32,10 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
 
 
-        <!-- LINKEDIN -->
         <a
             href="#"
-            class="floating-social linkedin"
+            class="floating-social floating-linkedin"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn">
@@ -45,10 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
 
 
-        <!-- TIKTOK -->
         <a
             href="#"
-            class="floating-social tiktok"
+            class="floating-social floating-tiktok"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="TikTok">
@@ -58,10 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
 
 
-        <!-- YOUTUBE -->
         <a
             href="#"
-            class="floating-social youtube"
+            class="floating-social floating-youtube"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube">
