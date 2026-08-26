@@ -1595,6 +1595,8 @@ footer {
     position: fixed;
 
     right: 0;
+    left: auto;
+
     top: 50%;
 
     transform: translateY(-50%);
@@ -1602,10 +1604,11 @@ footer {
     display: flex;
     flex-direction: column;
 
+    gap: 3px;
+
     z-index: 9997;
 
 }
-
 
 .floating-social {
 
@@ -1779,7 +1782,7 @@ footer {
 .floating-social:first-child {
 
     border-radius:
-        0 12px 0 0;
+        12px 0 0 0;
 
 }
 
@@ -1787,7 +1790,7 @@ footer {
 .floating-social:last-child {
 
     border-radius:
-        0 0 12px 0;
+        0 0 0 12px;
 
 }
 
