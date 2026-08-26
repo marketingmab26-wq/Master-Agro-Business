@@ -447,6 +447,173 @@ main {
 
 }
 
+/* =====================================================
+   BUSCADOR DE PRODUCTOS
+===================================================== */
+
+.product-search {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 420px;
+
+    margin: 20px auto 0;
+
+}
+
+
+.product-search input {
+
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #dce2de;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+
+    padding: 0 48px 0 45px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: var(--negro);
+
+    outline: none;
+
+    transition: .25s;
+
+}
+
+
+.product-search input::placeholder {
+
+    color: #9aa39d;
+
+}
+
+
+.product-search input:focus {
+
+    border-color: var(--verde);
+
+    box-shadow:
+        0 0 0 4px rgba(23,107,58,.08);
+
+}
+
+
+.search-icon {
+
+    position: absolute;
+
+    left: 17px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    font-size: 17px;
+
+    pointer-events: none;
+
+}
+
+
+#clearSearch {
+
+    position: absolute;
+
+    right: 12px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 30px;
+
+    height: 30px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #89938c;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: none;
+
+    transition: .2s;
+
+}
+
+
+#clearSearch:hover {
+
+    background: #f0f3f1;
+
+    color: var(--negro);
+
+}
+
+
+/* =====================================================
+   SIN RESULTADOS
+===================================================== */
+
+.no-results {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: var(--gris);
+
+}
+
+
+.no-results-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.no-results h3 {
+
+    font-size: 20px;
+
+    color: var(--negro);
+
+    margin-bottom: 5px;
+
+}
+
+
+.no-results p {
+
+    font-size: 13px;
+
+}
+    
 
 /* =====================================================
    GRUPOS DE PRODUCTOS
@@ -1523,6 +1690,24 @@ footer {
 
 <div class="products-container">
 
+<div
+    id="noResults"
+    class="no-results">
+
+    <div class="no-results-icon">
+        🔎
+    </div>
+
+    <h3>
+        No encontramos ese producto
+    </h3>
+
+    <p>
+        Prueba buscando con otro nombre.
+    </p>
+
+</div>
+    
 
 <!-- =====================================================
      FILTROS
@@ -1609,6 +1794,28 @@ footer {
         Black Life
 
     </button>
+
+    <div class="product-search">
+
+    <span class="search-icon">🔎</span>
+
+    <input
+        type="text"
+        id="productSearch"
+        placeholder="Buscar producto..."
+        autocomplete="off"
+    >
+
+    <button
+        type="button"
+        id="clearSearch"
+        aria-label="Limpiar búsqueda">
+
+        ×
+
+    </button>
+
+</div>
 
 </div>
 
@@ -3008,7 +3215,7 @@ aria-label="Volver arriba">
 <script>
 
 /* =====================================================
-   FILTROS
+   ELEMENTOS
 ===================================================== */
 
 const filterButtons =
@@ -3023,6 +3230,179 @@ const productLines =
     );
 
 
+const productCards =
+    document.querySelectorAll(
+        ".product-card"
+    );
+
+
+const searchInput =
+    document.getElementById(
+        "productSearch"
+    );
+
+
+const clearSearch =
+    document.getElementById(
+        "clearSearch"
+    );
+
+
+const noResults =
+    document.getElementById(
+        "noResults"
+    );
+
+
+/* =====================================================
+   FILTRO ACTUAL
+===================================================== */
+
+let currentFilter = "todos";
+
+
+/* =====================================================
+   MOSTRAR PRODUCTOS
+===================================================== */
+
+function filterProducts() {
+
+    const search =
+        searchInput.value
+            .toLowerCase()
+            .trim();
+
+
+    let visibleProducts = 0;
+
+
+    productLines.forEach(
+        line => {
+
+            const lineName =
+                line.dataset.line;
+
+
+            const lineMatches =
+                currentFilter === "todos" ||
+                lineName === currentFilter;
+
+
+            let visibleInLine = 0;
+
+
+            const cards =
+                line.querySelectorAll(
+                    ".product-card"
+                );
+
+
+            cards.forEach(
+                card => {
+
+                    const productName =
+                        card
+                            .querySelector(".product-name")
+                            .textContent
+                            .toLowerCase();
+
+
+                    const productLine =
+                        card
+                            .querySelector(".product-line-name")
+                            .textContent
+                            .toLowerCase();
+
+
+                    const matchesSearch =
+                        search === "" ||
+                        productName.includes(search) ||
+                        productLine.includes(search);
+
+
+                    if (
+                        lineMatches &&
+                        matchesSearch
+                    ) {
+
+                        card.style.display =
+                            "";
+
+                        visibleInLine++;
+
+                        visibleProducts++;
+
+                    } else {
+
+                        card.style.display =
+                            "none";
+
+                    }
+
+                }
+            );
+
+
+            if (
+                lineMatches &&
+                visibleInLine > 0
+            ) {
+
+                line.classList.remove(
+                    "hidden"
+                );
+
+            } else {
+
+                line.classList.add(
+                    "hidden"
+                );
+
+            }
+
+        }
+    );
+
+
+    /* Mostrar / ocultar mensaje */
+
+    if (
+        search !== "" &&
+        visibleProducts === 0
+    ) {
+
+        noResults.style.display =
+            "block";
+
+    } else {
+
+        noResults.style.display =
+            "none";
+
+    }
+
+
+    /* Mostrar botón limpiar */
+
+    if (search !== "") {
+
+        clearSearch.style.display =
+            "block";
+
+    } else {
+
+        clearSearch.style.display =
+            "none";
+
+    }
+
+}
+
+
+/* =====================================================
+   BOTONES DE LÍNEA
+===================================================== */
+
 filterButtons.forEach(
     button => {
 
@@ -3030,7 +3410,7 @@ filterButtons.forEach(
             "click",
             () => {
 
-                const filter =
+                currentFilter =
                     button.dataset.filter;
 
 
@@ -3050,28 +3430,7 @@ filterButtons.forEach(
                 );
 
 
-                productLines.forEach(
-                    line => {
-
-                        if (
-                            filter === "todos" ||
-                            line.dataset.line === filter
-                        ) {
-
-                            line.classList.remove(
-                                "hidden"
-                            );
-
-                        } else {
-
-                            line.classList.add(
-                                "hidden"
-                            );
-
-                        }
-
-                    }
-                );
+                filterProducts();
 
 
                 document
@@ -3088,6 +3447,38 @@ filterButtons.forEach(
 
             }
         );
+
+    }
+);
+
+
+/* =====================================================
+   BUSCADOR
+===================================================== */
+
+searchInput.addEventListener(
+    "input",
+    () => {
+
+        filterProducts();
+
+    }
+);
+
+
+/* =====================================================
+   LIMPIAR BUSCADOR
+===================================================== */
+
+clearSearch.addEventListener(
+    "click",
+    () => {
+
+        searchInput.value = "";
+
+        filterProducts();
+
+        searchInput.focus();
 
     }
 );
@@ -3144,7 +3535,6 @@ backToTop.addEventListener(
 );
 
 </script>
-
 
 </body>
 
