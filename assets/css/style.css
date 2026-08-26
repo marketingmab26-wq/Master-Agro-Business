@@ -151,3 +151,145 @@
     }
 
 }
+
+/* =====================================================
+   REDES SOCIALES FLOTANTES - MASTER AGRO
+===================================================== */
+
+#redes-flotantes {
+
+    position: fixed !important;
+
+    right: 0 !important;
+    left: auto !important;
+
+    top: 50% !important;
+
+    transform: translateY(-50%) !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 4px !important;
+
+    z-index: 999999 !important;
+
+}
+
+
+/* BOTONES */
+
+#redes-flotantes a {
+
+    width: 48px !important;
+    height: 48px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    font-family: Arial, Helvetica, sans-serif !important;
+
+    font-size: 17px !important;
+    font-weight: 900 !important;
+
+    border-radius: 8px 0 0 8px !important;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.25) !important;
+
+    transition:
+        .25s ease !important;
+
+}
+
+
+/* FACEBOOK */
+
+#redes-flotantes .red-facebook {
+
+    background: #1877F2 !important;
+
+}
+
+
+/* INSTAGRAM */
+
+#redes-flotantes .red-instagram {
+
+    background:
+        linear-gradient(
+            45deg,
+            #f09433,
+            #e6683c,
+            #dc2743,
+            #cc2366,
+            #bc1888
+        ) !important;
+
+}
+
+
+/* LINKEDIN */
+
+#redes-flotantes .red-linkedin {
+
+    background: #0A66C2 !important;
+
+}
+
+
+/* TIKTOK */
+
+#redes-flotantes .red-tiktok {
+
+    background: #000000 !important;
+
+}
+
+
+/* YOUTUBE */
+
+#redes-flotantes .red-youtube {
+
+    background: #FF0000 !important;
+
+}
+
+
+/* HOVER */
+
+#redes-flotantes a:hover {
+
+    width: 58px !important;
+
+    transform: translateX(-4px) !important;
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    #redes-flotantes a {
+
+        width: 40px !important;
+        height: 40px !important;
+
+        font-size: 13px !important;
+
+    }
+
+    #redes-flotantes a:hover {
+
+        width: 46px !important;
+
+    }
+
+}
