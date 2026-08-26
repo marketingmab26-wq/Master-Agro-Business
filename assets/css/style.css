@@ -3,51 +3,107 @@
 ===================================================== */
 
 .floating-socials {
+
     position: fixed;
+
     right: 0;
-    left: auto;
     top: 50%;
+
     transform: translateY(-50%);
 
     display: flex;
     flex-direction: column;
+
     gap: 3px;
 
-    z-index: 99999;
+    z-index: 9997;
+
 }
 
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
 .floating-social {
+
     width: 48px;
     height: 48px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    color: white;
+    background: #ffffff;
 
-    font-size: 17px;
+    color: var(--verde);
+
+    border: 1px solid #e1e6e2;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.10);
+
     font-weight: 900;
-
-    text-decoration: none;
+    font-size: 16px;
 
     transition:
         width .25s ease,
-        transform .25s ease;
+        background .25s ease,
+        color .25s ease;
+
 }
+
+
+/* =====================================================
+   REDONDEADO
+===================================================== */
+
+.floating-social:first-child {
+
+    border-radius:
+        12px 0 0 0;
+
+}
+
+.floating-social:last-child {
+
+    border-radius:
+        0 0 0 12px;
+
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
 
 .floating-social:hover {
+
     width: 58px;
-    transform: translateX(-4px);
+
+    color: white;
+
 }
 
-/* Facebook */
-.floating-facebook {
+
+/* =====================================================
+   FACEBOOK
+===================================================== */
+
+.floating-social.facebook:hover {
+
     background: #1877F2;
+
 }
 
-/* Instagram */
-.floating-instagram {
+
+/* =====================================================
+   INSTAGRAM
+===================================================== */
+
+.floating-social.instagram:hover {
+
     background:
         linear-gradient(
             45deg,
@@ -57,30 +113,40 @@
             #cc2366,
             #bc1888
         );
+
 }
 
-/* TikTok */
-.floating-tiktok {
-    background: #000;
-}
 
-/* LinkedIn */
-.floating-linkedin {
+/* =====================================================
+   LINKEDIN
+===================================================== */
+
+.floating-social.linkedin:hover {
+
     background: #0A66C2;
+
 }
 
-/* WhatsApp */
-.floating-whatsapp {
-    background: #25D366;
+
+/* =====================================================
+   TIKTOK
+===================================================== */
+
+.floating-social.tiktok:hover {
+
+    background: #000000;
+
 }
 
-/* Bordes */
-.floating-social:first-child {
-    border-radius: 12px 0 0 0;
-}
 
-.floating-social:last-child {
-    border-radius: 0 0 0 12px;
+/* =====================================================
+   YOUTUBE
+===================================================== */
+
+.floating-social.youtube:hover {
+
+    background: #FF0000;
+
 }
 
 
@@ -90,19 +156,19 @@
 
 @media (max-width: 600px) {
 
-    .floating-socials {
-        right: 0;
-    }
-
     .floating-social {
+
         width: 40px;
         height: 40px;
-        font-size: 14px;
+
+        font-size: 13px;
+
     }
 
     .floating-social:hover {
-        width: 45px;
-        transform: translateX(-3px);
+
+        width: 46px;
+
     }
 
 }
