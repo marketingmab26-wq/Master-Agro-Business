@@ -1,72 +1,62 @@
 /* =====================================================
-   REDES SOCIALES FLOTANTES - MASTER AGRO
+   REDES SOCIALES FLOTANTES MASTER AGRO
 ===================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const redesHTML = `
+    const redes = document.createElement("div");
 
-        <div class="floating-socials">
+    redes.className = "floating-socials";
 
-            <!-- FACEBOOK -->
-            <a
-                href="#"
-                class="floating-social facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook">
+    redes.innerHTML = `
 
-                f
+        <a
+            href="#"
+            class="floating-social floating-facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook">
+            f
+        </a>
 
-            </a>
+        <a
+            href="#"
+            class="floating-social floating-instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram">
+            ◎
+        </a>
 
+        <a
+            href="#"
+            class="floating-social floating-tiktok"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok">
+            ♪
+        </a>
 
-            <!-- INSTAGRAM -->
-            <a
-                href="#"
-                class="floating-social instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram">
+        <a
+            href="#"
+            class="floating-social floating-linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            in
+        </a>
 
-                ◎
-
-            </a>
-
-
-            <!-- TIKTOK -->
-            <a
-                href="#"
-                class="floating-social tiktok"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok">
-
-                ♪
-
-            </a>
-
-
-            <!-- LINKEDIN -->
-            <a
-                href="#"
-                class="floating-social linkedin"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn">
-
-                in
-
-            </a>
-
-        </div>
+        <a
+            href="https://wa.me/51970859150"
+            class="floating-social floating-whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp">
+            ☏
+        </a>
 
     `;
 
-
-    document.body.insertAdjacentHTML(
-        "beforeend",
-        redesHTML
-    );
+    document.body.appendChild(redes);
 
 });
