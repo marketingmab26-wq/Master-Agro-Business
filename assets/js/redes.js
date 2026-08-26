@@ -1,7 +1,3 @@
-/* =====================================================
-   REDES SOCIALES FLOTANTES MASTER AGRO
-===================================================== */
-
 document.addEventListener("DOMContentLoaded", function () {
 
     const redes = document.createElement("div");
@@ -10,49 +6,68 @@ document.addEventListener("DOMContentLoaded", function () {
 
     redes.innerHTML = `
 
+        <!-- FACEBOOK -->
         <a
             href="#"
-            class="floating-social floating-facebook"
+            class="floating-social facebook"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook">
+
             f
+
         </a>
 
+
+        <!-- INSTAGRAM -->
         <a
             href="#"
-            class="floating-social floating-instagram"
+            class="floating-social instagram"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram">
+
             ◎
+
         </a>
 
-        <a
-            href="#"
-            class="floating-social floating-tiktok"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="TikTok">
-            ♪
-        </a>
 
+        <!-- LINKEDIN -->
         <a
             href="#"
-            class="floating-social floating-linkedin"
+            class="floating-social linkedin"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn">
+
             in
+
         </a>
 
+
+        <!-- TIKTOK -->
         <a
-            href="https://wa.me/51970859150"
-            class="floating-social floating-whatsapp"
+            href="#"
+            class="floating-social tiktok"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="WhatsApp">
-            ☏
+            aria-label="TikTok">
+
+            ♪
+
+        </a>
+
+
+        <!-- YOUTUBE -->
+        <a
+            href="#"
+            class="floating-social youtube"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube">
+
+            ▶
+
         </a>
 
     `;
