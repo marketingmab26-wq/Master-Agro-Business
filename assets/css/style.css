@@ -14,16 +14,13 @@
     display: flex;
     flex-direction: column;
 
+    z-index: 9999;
+
     gap: 3px;
-
-    z-index: 9997;
-
 }
 
 
-/* =====================================================
-   BOTONES
-===================================================== */
+/* BOTÓN */
 
 .floating-social {
 
@@ -31,58 +28,39 @@
     height: 48px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
-    background: #ffffff;
+    color: #ffffff;
 
-    color: var(--verde);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 900;
 
-    border: 1px solid #e1e6e2;
+    text-decoration: none;
+
+    border-radius: 8px 0 0 8px;
 
     box-shadow:
-        0 4px 15px rgba(0,0,0,.10);
-
-    font-weight: 900;
-    font-size: 16px;
+        0 4px 15px rgba(0,0,0,.18);
 
     transition:
         width .25s ease,
-        background .25s ease,
-        color .25s ease;
+        transform .25s ease,
+        filter .25s ease;
 
 }
 
 
-/* =====================================================
-   REDONDEADO
-===================================================== */
-
-.floating-social:first-child {
-
-    border-radius:
-        12px 0 0 0;
-
-}
-
-.floating-social:last-child {
-
-    border-radius:
-        0 0 0 12px;
-
-}
-
-
-/* =====================================================
-   HOVER
-===================================================== */
+/* HOVER */
 
 .floating-social:hover {
 
     width: 58px;
 
-    color: white;
+    transform: translateX(-3px);
+
+    filter: brightness(.90);
 
 }
 
@@ -91,7 +69,7 @@
    FACEBOOK
 ===================================================== */
 
-.floating-social.facebook:hover {
+.floating-facebook {
 
     background: #1877F2;
 
@@ -102,7 +80,7 @@
    INSTAGRAM
 ===================================================== */
 
-.floating-social.instagram:hover {
+.floating-instagram {
 
     background:
         linear-gradient(
@@ -121,7 +99,7 @@
    LINKEDIN
 ===================================================== */
 
-.floating-social.linkedin:hover {
+.floating-linkedin {
 
     background: #0A66C2;
 
@@ -132,7 +110,7 @@
    TIKTOK
 ===================================================== */
 
-.floating-social.tiktok:hover {
+.floating-tiktok {
 
     background: #000000;
 
@@ -143,7 +121,7 @@
    YOUTUBE
 ===================================================== */
 
-.floating-social.youtube:hover {
+.floating-youtube {
 
     background: #FF0000;
 
@@ -164,6 +142,7 @@
         font-size: 13px;
 
     }
+
 
     .floating-social:hover {
 
