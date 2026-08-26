@@ -1594,7 +1594,7 @@ footer {
 
     position: fixed;
 
-    left: 0;
+    right: 0;
     top: 50%;
 
     transform: translateY(-50%);
@@ -1713,6 +1713,176 @@ footer {
 
 }
 
+/* =====================================================
+   REDES SOCIALES FLOTANTES
+===================================================== */
+
+.floating-socials {
+
+    position: fixed;
+
+    left: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    z-index: 9997;
+
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.floating-social {
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: var(--verde);
+
+    border: 1px solid #e1e6e2;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.10);
+
+    font-weight: 900;
+
+    font-size: 16px;
+
+    transition:
+        width .25s ease,
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+
+}
+
+
+/* =====================================================
+   BORDES
+===================================================== */
+
+.floating-social:first-child {
+
+    border-radius:
+        0 12px 0 0;
+
+}
+
+
+.floating-social:last-child {
+
+    border-radius:
+        0 0 12px 0;
+
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.floating-social:hover {
+
+    width: 58px;
+
+    color: #ffffff;
+
+    transform: translateX(3px);
+
+}
+
+
+/* =====================================================
+   FACEBOOK
+===================================================== */
+
+.floating-social.facebook:hover {
+
+    background: #1877F2;
+
+}
+
+
+/* =====================================================
+   INSTAGRAM
+===================================================== */
+
+.floating-social.instagram:hover {
+
+    background:
+        linear-gradient(
+            45deg,
+            #f09433,
+            #e6683c,
+            #dc2743,
+            #cc2366,
+            #bc1888
+        );
+
+}
+
+
+/* =====================================================
+   TIKTOK
+===================================================== */
+
+.floating-social.tiktok:hover {
+
+    background: #000000;
+
+}
+
+
+/* =====================================================
+   LINKEDIN
+===================================================== */
+
+.floating-social.linkedin:hover {
+
+    background: #0A66C2;
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width:600px) {
+
+    .floating-social {
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 13px;
+
+    }
+
+
+    .floating-social:hover {
+
+        width: 46px;
+
+    }
+
+}
+    
 </style>
 
 </head>
@@ -3303,84 +3473,6 @@ Todos los derechos reservados.
 </footer>
 
 <!-- =====================================================
-     REDES SOCIALES FLOTANTES
-===================================================== -->
-
-<div class="floating-socials">
-
-    <!-- FACEBOOK -->
-
-    <a
-        href="#"
-        class="floating-social floating-facebook"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Facebook">
-
-        f
-
-    </a>
-
-
-    <!-- INSTAGRAM -->
-
-    <a
-        href="#"
-        class="floating-social floating-instagram"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram">
-
-        ◎
-
-    </a>
-
-
-    <!-- TIKTOK -->
-
-    <a
-        href="#"
-        class="floating-social floating-tiktok"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="TikTok">
-
-        ♪
-
-    </a>
-
-
-    <!-- LINKEDIN -->
-
-    <a
-        href="#"
-        class="floating-social floating-linkedin"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn">
-
-        in
-
-    </a>
-
-
-    <!-- WHATSAPP -->
-
-    <a
-        href="https://wa.me/51970859150"
-        class="floating-social floating-social-whatsapp"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="WhatsApp">
-
-        ☏
-
-    </a>
-
-</div>
-    
-
-<!-- =====================================================
      WHATSAPP
 ===================================================== -->
 
@@ -3740,62 +3832,6 @@ backToTop.addEventListener(
 
 </script>
 
-<!-- =====================================================
-     REDES SOCIALES FLOTANTES
-===================================================== -->
-
-<div class="floating-socials">
-
-    <a
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Facebook"
-        class="floating-social facebook">
-
-        f
-
-    </a>
-
-
-    <a
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram"
-        class="floating-social instagram">
-
-        ◎
-
-    </a>
-
-
-    <a
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-        class="floating-social linkedin">
-
-        in
-
-    </a>
-
-
-    <a
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="TikTok"
-        class="floating-social tiktok">
-
-        ♪
-
-    </a>
-
-</div>
-
-
 <style>
 
     /* =====================================================
@@ -3940,6 +3976,65 @@ backToTop.addEventListener(
     }
 
 </style>
+
+    <!-- =====================================================
+     REDES SOCIALES FLOTANTES
+===================================================== -->
+
+<div class="floating-socials">
+
+    <!-- FACEBOOK -->
+    <a
+        href="TU_LINK_FACEBOOK"
+        class="floating-social facebook"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook">
+
+        f
+
+    </a>
+
+
+    <!-- INSTAGRAM -->
+    <a
+        href="TU_LINK_INSTAGRAM"
+        class="floating-social instagram"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram">
+
+        ◎
+
+    </a>
+
+
+    <!-- TIKTOK -->
+    <a
+        href="TU_LINK_TIKTOK"
+        class="floating-social tiktok"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="TikTok">
+
+        ♪
+
+    </a>
+
+
+    <!-- LINKEDIN -->
+    <a
+        href="TU_LINK_LINKEDIN"
+        class="floating-social linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn">
+
+        in
+
+    </a>
+
+</div>
     
 </body>
 
